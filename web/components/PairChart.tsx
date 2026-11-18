@@ -76,7 +76,15 @@ export default function PairChart({ series, draw = false, height = 300 }: { seri
         <span><i className="lp" />Polymarket</span>
         <span><i className="lg" />Gap between them (also shown below in points)</span>
       </div>
-      <svg className="chart" width={W} height={TOTAL} viewBox={`0 0 ${W} ${TOTAL}`} role="img" aria-label="Kalshi and Polymarket prices for the same question over time"
+      <svg className="chart" width={W} height={TOTAL} viewBox={`0 0 ${W} ${TOTAL}`} role="img" aria-label="Kalshi and Polymarket prices for the same question over time. Use the left and right arrow keys to step through the readings."
+        tabIndex={0}
+        onKeyDown={(e) => {
+          const step = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+          if (e.key === "Home") { e.preventDefault(); setHover(0); }
+          else if (e.key === "End") { e.preventDefault(); setHover(series.length - 1); }
+          else if (step) { e.preventDefault(); setHover((h) => Math.max(0, Math.min(series.length - 1, (h ?? (step > 0 ? -1 : series.length)) + step))); }
+        }}
+        onBlur={() => setHover(null)}
         onMouseMove={(e) => pick(e.clientX, e.currentTarget.getBoundingClientRect())} onMouseLeave={() => setHover(null)}
         onTouchStart={(e) => pick(e.touches[0].clientX, e.currentTarget.getBoundingClientRect())}
         onTouchMove={(e) => pick(e.touches[0].clientX, e.currentTarget.getBoundingClientRect())}>
@@ -106,8 +114,8 @@ export default function PairChart({ series, draw = false, height = 300 }: { seri
       </svg>
       <div className="readout" aria-live="polite">
         {h ? (
-          <><b>{fmtTime(h[0])}</b> · <span className="k">Kalshi {(h[1] * 100).toFixed(1)}%</span> · <span className="p">Polymarket {(h[2] * 100).toFixed(1)}%</span> · gap <b>{(Math.abs(h[1] - h[2]) * 100).toFixed(1)} pts</b></>
-        ) : "Hover or tap the chart to read both prices at a moment in time."}
+          <><b>{fmtTime(h[0])}</b>: <span className="k">Kalshi {(h[1] * 100).toFixed(1)}%</span>, <span className="p">Polymarket {(h[2] * 100).toFixed(1)}%</span>, gap <b>{(Math.abs(h[1] - h[2]) * 100).toFixed(1)} pts</b></>
+        ) : "Hover, tap, or focus the chart and use the arrow keys to read both prices at a moment in time."}
       </div>
     </div>
   );

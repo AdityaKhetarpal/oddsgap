@@ -3,6 +3,7 @@ import Bars from "@/components/Bars";
 import { overview, num, CATEGORY_NAME, signed } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/categories" },
   title: "By category",
   description: "Price gaps between Kalshi and Polymarket by category: NBA, NFL, MLB and NHL games and Fed rate decisions.",
 };
@@ -15,7 +16,6 @@ export default function Categories() {
   return (
     <div className="wrap">
       <div className="head">
-        <div className="kicker">By category</div>
         <h1>Where the two markets disagree most</h1>
         <p>
           {CATEGORY_NAME[most.category]}: {most.share_over_2pp.toFixed(0)}% of pairs differed by 2 points or more, against{" "}
@@ -23,19 +23,19 @@ export default function Categories() {
         </p>
       </div>
 
-      <section className="card" data-reveal>
+      <section className="card">
         <h2>Share of pairs that differed by 2 points or more</h2>
         <Bars rows={rows.map((c) => ({ label: CATEGORY_NAME[c.category], value: c.share_over_2pp }))} unit="%" label="Share of pairs with a median gap of 2 points or more, by category" />
         <p className="source">Source: Kalshi and Polymarket public APIs, Jan 2025 to Oct 2026. Each pair counts once.</p>
       </section>
 
-      <section className="section" data-reveal>
+      <section className="section">
         <h2>The numbers</h2>
         <p className="sub">
           &ldquo;Kalshi higher&rdquo; is the median signed difference: above zero means Kalshi priced &ldquo;yes&rdquo; higher than Polymarket.
           Brier score is the accuracy score a day before the close (lower is better).
         </p>
-        <div className="table-wrap" style={{ marginTop: 14 }}>
+        <div className="table-wrap" tabIndex={0} role="region" aria-label="Data table" style={{ marginTop: 14 }}>
           <table>
             <thead>
               <tr>

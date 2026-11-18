@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource-variable/ibm-plex-sans";
+import "@fontsource-variable/archivo/wdth.css";
 import "@fontsource/ibm-plex-mono/400.css";
 import "./globals.css";
 import Nav from "@/components/Nav";
@@ -9,6 +9,9 @@ const SITE = "https://odds-gap.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
+  alternates: { canonical: "/" },
+  twitter: { card: "summary_large_image" },
+  authors: [{ name: "Aditya Khetarpal", url: "https://www.linkedin.com/in/adityakhetarpal" }],
   title: { default: "OddsGap: same event, two prices (Kalshi vs Polymarket)", template: "%s · OddsGap" },
   description:
     "When Kalshi and Polymarket list the same yes/no question, how far apart are their prices, do the gaps close near the end, and which is more accurate? Thousands of matched NBA, NFL, MLB, NHL and Fed-decision markets, tested.",
@@ -33,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <span>Data: Kalshi and Polymarket public market-data APIs (no keys). Markets that closed 1 Jan 2025 to 31 Oct 2026.</span>
             <span>Descriptive research only: not trading advice and not a trading signal. Not affiliated with Kalshi or Polymarket.</span>
             <span>
-              <a href="https://github.com/AdityaKhetarpal/oddsgap">Notebooks and data on GitHub</a> · built by{" "}
+              <a href="https://github.com/AdityaKhetarpal/oddsgap">Notebooks and data on GitHub</a>. Built by{" "}
               <a href="https://www.linkedin.com/in/adityakhetarpal">Aditya Khetarpal</a>
             </span>
           </div>

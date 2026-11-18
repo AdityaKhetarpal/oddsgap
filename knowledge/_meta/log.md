@@ -15,3 +15,5 @@
   (Kalshi tickers ending G1/G2) were paired with the wrong Polymarket game, so all doubleheader games are dropped; (2) a few
   pairs closed days or months apart (rescheduled games; one Polymarket Fed event that closed in May for a September meeting),
   so pairs must close within 24 hours of each other. Coverage note: Polymarket's NFL series only lists the 2026 season.
+- 2026-11-18 · website · **Design revision, no change to data or verdicts.** New typefaces, ruled answer rows, one animation,
+  keyboard-readable charts, SEO metadata. Recorded in DESIGN.md.

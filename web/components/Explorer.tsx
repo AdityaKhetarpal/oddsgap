@@ -24,7 +24,7 @@ export default function Explorer({ pairs }: { pairs: Pair[] }) {
       <label className="small" htmlFor="pair">Pair ({list.length} most-traded in this category)</label>
       <select id="pair" value={pair?.id} onChange={(e) => setId(Number(e.target.value))}>
         {list.map((p) => (
-          <option key={p.id} value={p.id}>{day(p.date)} · {p.poly_question.split(" · ")[0]} · gap {p.gap_pp.toFixed(1)} pts</option>
+          <option key={p.id} value={p.id}>{day(p.date)}, {p.poly_question.split(" · ")[0]}, gap {p.gap_pp.toFixed(1)} pts</option>
         ))}
       </select>
       {pair && (
@@ -34,7 +34,7 @@ export default function Explorer({ pairs }: { pairs: Pair[] }) {
             <div className="qp"><span className="p">Polymarket:</span> {pair.poly_question}</div>
           </div>
           <p className="small" style={{ marginTop: 8 }}>
-            Settled <b>{pair.outcome ? "yes" : "no"}</b> on both · median gap <b>{pair.gap_pp.toFixed(2)} pts</b> over {pair.series.length} comparable 3-hour points
+            Settled <b>{pair.outcome ? "yes" : "no"}</b> on both, median gap <b>{pair.gap_pp.toFixed(2)} pts</b> over {pair.series.length} comparable 3-hour points
           </p>
           <PairChart key={pair.id} series={pair.series} />
         </div>

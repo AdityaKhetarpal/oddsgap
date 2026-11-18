@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { overview, totals, num, CATEGORY_NAME } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/method" },
   title: "How we tested it",
   description: "The pre-registered test behind OddsGap: how questions were matched across Kalshi and Polymarket, how prices were lined up, the three hypotheses and their verdicts, and the limits.",
 };
@@ -15,10 +16,9 @@ export default function Method() {
   return (
     <div className="wrap">
       <div className="head">
-        <div className="kicker">Locked on {r.pre_registered}, before any market data was downloaded</div>
         <h1>How we tested it</h1>
         <p>
-          The questions, the definitions and the rule for each verdict were written down before we saw any data.
+          The questions, the definitions and the rule for each verdict were written down and locked on {r.pre_registered}, before any market data was downloaded.
           Every step can be rerun from the <a href={GH}>notebooks on GitHub</a>.
         </p>
       </div>
@@ -33,7 +33,7 @@ export default function Method() {
           <li><b>Dropped by rule:</b> doubleheader games (the two platforms can&apos;t be lined up reliably) and pairs whose two markets closed more than 24 hours apart (rescheduled games).</li>
           <li><b>Checked by hand:</b> 25 random pairs per category, {t.correct} of {t.reviewed} correct (same question, same &ldquo;yes&rdquo; side).</li>
         </ul>
-        <div className="table-wrap" style={{ margin: "8px 0 18px" }}>
+        <div className="table-wrap" tabIndex={0} role="region" aria-label="Data table" style={{ margin: "8px 0 18px" }}>
           <table>
             <thead><tr><th>Category</th><th className="num">Matched</th><th className="num">Liquid</th><th className="num">Prices downloaded</th><th className="num">Tested</th><th className="num">Settled differently</th></tr></thead>
             <tbody>
@@ -59,7 +59,7 @@ export default function Method() {
         <h2>3. The three locked tests</h2>
         <ul>
           <li><b>H1, the gap is at least 2 points:</b> {r.h1.verdict}. Median {r.h1.value.toFixed(2)} pts, 90% range {r.h1.low.toFixed(2)} to {r.h1.high.toFixed(2)}, {num(r.h1.n)} pairs.</li>
-          <li><b>H2, gaps narrow in the last 24 hours compared with 3+ days out:</b> {r.h2.verdict}. {r.h2.far_median.toFixed(2)} → {r.h2.near_median.toFixed(2)} pts;
+          <li><b>H2, gaps narrow in the last 24 hours compared with 3+ days out:</b> {r.h2.verdict}. from {r.h2.far_median.toFixed(2)} to {r.h2.near_median.toFixed(2)} pts;
             change {r.h2.value.toFixed(2)}, 90% range {r.h2.low.toFixed(2)} to {r.h2.high.toFixed(2)}, {num(r.h2.n)} pairs.</li>
           <li><b>H3, equal accuracy a day before the close (Brier score):</b> {r.h3.verdict}. Kalshi {r.h3.brier_kalshi.toFixed(4)}, Polymarket {r.h3.brier_polymarket.toFixed(4)};
             difference {r.h3.value.toFixed(4)}, 90% range {r.h3.low.toFixed(4)} to {r.h3.high.toFixed(4)}, {num(r.h3.n)} pairs.</li>
@@ -73,7 +73,7 @@ export default function Method() {
               {r.mismatches.length} pairs settled one way on Kalshi and the other way on Polymarket. Their dates and close times point to rescheduled or relabelled
               games rather than a real dispute, but we list them rather than drop them. They are left out of the accuracy test.
             </p>
-            <div className="table-wrap">
+            <div className="table-wrap" tabIndex={0} role="region" aria-label="Data table">
               <table>
                 <thead><tr><th>Date</th><th>Kalshi market</th><th>Polymarket event</th><th className="num">Kalshi</th><th className="num">Polymarket</th></tr></thead>
                 <tbody>
