@@ -1,0 +1,152 @@
+[
+ {
+  "name": "p2_events_keyset_nba",
+  "url": "https://gamma-api.polymarket.com/events/keyset?series_id=10345&closed=true&limit=4",
+  "status": 200,
+  "bytes": 44509
+ },
+ {
+  "name": "p2_events_list_nba",
+  "url": "https://gamma-api.polymarket.com/events?series_id=10345&closed=true&limit=4&order=startDate&ascending=false",
+  "status": 200,
+  "bytes": 183994
+ },
+ {
+  "name": "p2_teams_nba",
+  "url": "https://gamma-api.polymarket.com/teams?league=nba&limit=200",
+  "status": 200,
+  "bytes": 11048
+ },
+ {
+  "name": "p2_events_keyset_nfl",
+  "url": "https://gamma-api.polymarket.com/events/keyset?series_id=12185&closed=true&limit=4",
+  "status": 200,
+  "bytes": 283916
+ },
+ {
+  "name": "p2_events_list_nfl",
+  "url": "https://gamma-api.polymarket.com/events?series_id=12185&closed=true&limit=4&order=startDate&ascending=false",
+  "status": 200,
+  "bytes": 1293487
+ },
+ {
+  "name": "p2_teams_nfl",
+  "url": "https://gamma-api.polymarket.com/teams?league=nfl&limit=200",
+  "status": 200,
+  "bytes": 10027
+ },
+ {
+  "name": "p2_events_keyset_mlb",
+  "url": "https://gamma-api.polymarket.com/events/keyset?series_id=3&closed=true&limit=4",
+  "status": 200,
+  "bytes": 23316
+ },
+ {
+  "name": "p2_events_list_mlb",
+  "url": "https://gamma-api.polymarket.com/events?series_id=3&closed=true&limit=4&order=startDate&ascending=false",
+  "status": 200,
+  "bytes": 1852602
+ },
+ {
+  "name": "p2_teams_mlb",
+  "url": "https://gamma-api.polymarket.com/teams?league=mlb&limit=200",
+  "status": 200,
+  "bytes": 10262
+ },
+ {
+  "name": "p2_events_keyset_nhl",
+  "url": "https://gamma-api.polymarket.com/events/keyset?series_id=10346&closed=true&limit=4",
+  "status": 200,
+  "bytes": 25296
+ },
+ {
+  "name": "p2_events_list_nhl",
+  "url": "https://gamma-api.polymarket.com/events?series_id=10346&closed=true&limit=4&order=startDate&ascending=false",
+  "status": 200,
+  "bytes": 237619
+ },
+ {
+  "name": "p2_teams_nhl",
+  "url": "https://gamma-api.polymarket.com/teams?league=nhl&limit=200",
+  "status": 200,
+  "bytes": 10857
+ },
+ {
+  "name": "p2_event_slug",
+  "url": "https://gamma-api.polymarket.com/events/slug/nba-por-min-2026-11-17",
+  "status": 200,
+  "bytes": 2060014
+ },
+ {
+  "name": "p2_events_keyset_nba_old",
+  "url": "https://gamma-api.polymarket.com/events/keyset?series_id=10345&closed=true&limit=3&end_date_max=2025-03-01T00%3A00%3A00Z",
+  "status": 200,
+  "bytes": 14
+ },
+ {
+  "name": "p2_events_fed",
+  "url": "https://gamma-api.polymarket.com/public-search?q=Fed+decision&events_status=closed&limit_per_type=40",
+  "status": 200,
+  "bytes": 907001
+ },
+ {
+  "name": "p2_k_events_nba",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXNBAGAME&status=settled&limit=3&with_nested_markets=true",
+  "status": 200,
+  "bytes": 14795
+ },
+ {
+  "name": "p2_k_hist_events_nba",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/events?series_ticker=KXNBAGAME&limit=3",
+  "status": 404,
+  "bytes": 18
+ },
+ {
+  "name": "p2_k_markets_nba",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXNBAGAME&status=settled&limit=2",
+  "status": 200,
+  "bytes": 4447
+ },
+ {
+  "name": "p2_k_candles_batch",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/candlesticks?market_tickers=KXNBAGAME-26NOV17PORMIN-POR%2CKXNBAGAME-26NOV17PORMIN-MIN&period_interval=60&start_ts=1794618378&end_ts=1794976660",
+  "status": 200,
+  "bytes": 77140
+ },
+ {
+  "name": "p2_k_candles_series",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXNBAGAME/markets/KXNBAGAME-26NOV17PORMIN-POR/candlesticks?period_interval=60&start_ts=1794618378&end_ts=1794976660",
+  "status": 200,
+  "bytes": 38395
+ },
+ {
+  "name": "p2_k_hist_markets_nba",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/markets?series_ticker=KXNBAGAME&limit=2",
+  "status": 200,
+  "bytes": 3487
+ },
+ {
+  "name": "p2_k_hist_candles",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/markets/KXNBAGAME-26JUN13NYKSAS-SAS/candlesticks?period_interval=60&start_ts=1780977300&end_ts=1781411507",
+  "status": 200,
+  "bytes": 40648
+ },
+ {
+  "name": "p2_k_fed_event",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events/KXFEDDECISION-26OCT?with_nested_markets=true",
+  "status": 200,
+  "bytes": 10064
+ },
+ {
+  "name": "p2_k_fed_markets",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets?event_ticker=KXFEDDECISION-26OCT",
+  "status": 200,
+  "bytes": 9544
+ },
+ {
+  "name": "p2_k_fed_hist",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/markets?series_ticker=KXFEDDECISION&limit=30",
+  "status": 200,
+  "bytes": 60349
+ }
+]
