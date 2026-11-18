@@ -1,0 +1,126 @@
+pair_id,category,date,kalshi_ticker,kalshi_question,poly_slug,poly_question,kalshi_result,poly_result
+7586,Fed,2026-06-17,KXFEDDECISION-26JUN-H26,Will the Federal Reserve Hike rates by >25bps at their June 2026 meeting?,fed-decision-in-june-825,Will the Fed increase interest rates by 50+ bps after the June 2026 meeting?,0,0
+7590,Fed,2026-07-29,KXFEDDECISION-26JUL-H25,Will the Federal Reserve Hike rates by 25bps at their July 2026 meeting?,fed-decision-in-july-181,Will the Fed increase interest rates by 25 bps after the July 2026 meeting?,0,0
+7587,Fed,2026-07-29,KXFEDDECISION-26JUL-C26,Will the Federal Reserve Cut rates by >25bps at their July 2026 meeting?,fed-decision-in-july-181,Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?,0,0
+7567,Fed,2026-03-18,KXFEDDECISION-26MAR-C25,Will the Federal Reserve Cut rates by 25bps at their March 2026 meeting?,fed-decision-in-march-885,Will the Fed decrease interest rates by 25 bps after the March 2026 meeting?,0,0
+7593,Fed,2025-07-30,KXFEDDECISION-25JUL-C25,Will the Federal Reserve Cut rates by 25bps at their July 2025 meeting?,fed-decision-in-july,Fed decreases interest rates by 25 bps after July 2025 meeting?,0,0
+7572,Fed,2025-09-17,KXFEDDECISION-25SEP-C26,Will the Federal Reserve Cut rates by >25bps at their September 2025 meeting?,fed-decision-in-september,Fed decreases interest rates by 50+ bps after September 2025 meeting?,0,0
+7570,Fed,2025-10-29,KXFEDDECISION-25OCT-C25,Will the Federal Reserve Cut rates by 25bps at their October 2025 meeting?,fed-decision-in-october,Fed decreases interest rates by 25 bps after October 2025 meeting?,1,1
+7600,Fed,2026-10-28,KXFEDDECISION-26OCT-H0,Will the Federal Reserve Hike rates by 0bps at their October 2026 meeting?,fed-decision-in-october-20260617190323537,Will there be no change in Fed interest rates after the October 2026 meeting?,1,1
+7591,Fed,2026-07-29,KXFEDDECISION-26JUL-H26,Will the Federal Reserve Hike rates by >25bps at their July 2026 meeting?,fed-decision-in-july-181,Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?,0,0
+7597,Fed,2025-06-18,KXFEDDECISION-25JUN-H0,Will the Federal Reserve Hike rates by 0bps at their June 2025 meeting?,fed-decision-in-june,No change in Fed interest rates after June 2025 meeting?,1,1
+7579,Fed,2026-09-16,KXFEDDECISION-26SEP-H26,Will the Federal Reserve Hike rates by >25bps at their September 2026 meeting?,fed-decision-in-september-762,Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?,0,0
+7569,Fed,2025-10-29,KXFEDDECISION-25OCT-C26,Will the Federal Reserve Cut rates by >25bps at their October 2025 meeting?,fed-decision-in-october,Fed decreases interest rates by 50+ bps after October 2025 meeting?,0,0
+7577,Fed,2026-09-16,KXFEDDECISION-26SEP-H0,Will the Federal Reserve Hike rates by 0bps at their September 2026 meeting?,fed-decision-in-september-762,Will there be no change in Fed interest rates after the September 2026 meeting?,0,0
+7558,Fed,2026-01-28,KXFEDDECISION-26JAN-C25,Will the Federal Reserve Cut rates by 25bps at their January 2026 meeting?,fed-decision-in-january,Fed decreases interest rates by 25 bps after January 2026 meeting?,0,0
+7606,Fed,2025-03-19,KXFEDDECISION-25MAR-C26,Will the Federal Reserve Cut rates by >25bps at their March 2025 meeting?,fed-decision-in-march,Fed decreases interest rates by 50+ bps after March 2025 meeting?,0,0
+7574,Fed,2025-09-17,KXFEDDECISION-25SEP-H0,Will the Federal Reserve Hike rates by 0bps at their September 2025 meeting?,fed-decision-in-september,No change in Fed interest rates after September 2025 meeting?,0,0
+7601,Fed,2026-10-28,KXFEDDECISION-26OCT-H25,Will the Federal Reserve Hike rates by 25bps at their October 2026 meeting?,fed-decision-in-october-20260617190323537,Will the Fed increase interest rates by 25 bps after the October 2026 meeting?,0,0
+7575,Fed,2026-09-16,KXFEDDECISION-26SEP-C26,Will the Federal Reserve Cut rates by >25bps at their September 2026 meeting?,fed-decision-in-september-762,Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?,0,0
+7610,Fed,2026-09-16,KXFEDDECISION-26SEP-C25,Will the Federal Reserve Cut rates by 25bps at their September 2026 meeting?,fed-decision-in-september-568,Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?,0,0
+7602,Fed,2026-10-28,KXFEDDECISION-26OCT-H26,Will the Federal Reserve Hike rates by >25bps at their October 2026 meeting?,fed-decision-in-october-20260617190323537,Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?,0,0
+7588,Fed,2026-07-29,KXFEDDECISION-26JUL-C25,Will the Federal Reserve Cut rates by 25bps at their July 2026 meeting?,fed-decision-in-july-181,Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?,0,0
+7598,Fed,2026-10-28,KXFEDDECISION-26OCT-C26,Will the Federal Reserve Cut rates by >25bps at their October 2026 meeting?,fed-decision-in-october-20260617190323537,Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?,0,0
+7592,Fed,2025-07-30,KXFEDDECISION-25JUL-C26,Will the Federal Reserve Cut rates by >25bps at their July 2025 meeting?,fed-decision-in-july,Fed decreases interest rates by 50+ bps after July 2025 meeting?,0,0
+7605,Fed,2025-05-07,KXFEDDECISION-25MAY-H0,Will the Federal Reserve Hike rates by 0bps at their May 2025 meeting?,fed-decision-in-may-2025,No change in Fed interest rates after May 2025 meeting?,1,1
+7566,Fed,2026-03-18,KXFEDDECISION-26MAR-C26,Will the Federal Reserve Cut rates by >25bps at their March 2026 meeting?,fed-decision-in-march-885,Will the Fed decrease interest rates by 50+ bps after the March 2026 meeting?,0,0
+3542,MLB,2025-09-20,KXMLBGAME-25SEP20CHCCIN-CHC,Chicago C at Cincinnati Winner? · yes = Chicago C,mlb-chc-cin-2025-09-20,Cubs vs. Reds · yes = Cubs,0,0
+1688,MLB,2025-04-28,KXMLBGAME-25APR28MINCLE-MIN,Minnesota vs Cleveland Winner? · yes = Minnesota,mlb-min-cle-2025-04-28,Twins vs. Guardians · yes = Twins,1,1
+2149,MLB,2025-06-01,KXMLBGAME-25JUN01PITSD-PIT,Pittsburgh vs San Diego Winner? · yes = Pittsburgh,mlb-pit-sd-2025-06-01,Pirates vs. Padres · yes = Pirates,0,0
+2664,MLB,2025-07-10,KXMLBGAME-25JUL10CLECWS-CLE,Cleveland at Chicago WS Winner? · yes = Cleveland,mlb-cle-cws-2025-07-10,Guardians vs. White Sox · yes = Guardians,1,1
+2477,MLB,2025-06-26,KXMLBGAME-25JUN26CHCSTL-CHC,Chicago C vs St. Louis Winner? · yes = Chicago C,mlb-chc-stl-2025-06-26,Cubs vs. Cardinals · yes = Cubs,1,1
+2334,MLB,2025-06-15,KXMLBGAME-25JUN15CLESEA-CLE,Cleveland vs Seattle Winner? · yes = Cleveland,mlb-cle-sea-2025-06-15,Guardians vs. Mariners · yes = Guardians,0,0
+5743,MLB,2026-08-30,KXMLBGAME-26AUG301340LADDET-LAD,Los Angeles D wins · yes = Los Angeles D,mlb-lad-det-2026-08-30,Los Angeles Dodgers vs. Detroit Tigers · yes = Los Angeles Dodgers,1,1
+3900,MLB,2026-04-10,KXMLBGAME-26APR102140HOUSEA-HOU,Houston vs Seattle Winner? · yes = Houston,mlb-hou-sea-2026-04-10,Houston Astros vs. Seattle Mariners · yes = Houston Astros,0,0
+4976,MLB,2026-06-30,KXMLBGAME-26JUN302040MIACOL-MIA,Miami vs Colorado Winner? · yes = Miami,mlb-mia-col-2026-06-30,Miami Marlins vs. Colorado Rockies · yes = Miami Marlins,1,1
+4717,MLB,2026-06-11,KXMLBGAME-26JUN111310AZMIA-AZ,Arizona vs Miami Winner? · yes = Arizona,mlb-ari-mia-2026-06-11,Arizona Diamondbacks vs. Miami Marlins · yes = Arizona Diamondbacks,0,0
+5557,MLB,2026-08-16,KXMLBGAME-26AUG161340WSHNYM-WSH,Washington vs New York M Winner? · yes = Washington,mlb-wsh-nym-2026-08-16,Washington Nationals vs. New York Mets · yes = Washington Nationals,0,0
+4905,MLB,2026-06-25,KXMLBGAME-26JUN251910NYYBOS-NYY,New York Y vs Boston Winner? · yes = New York Y,mlb-nyy-bos-2026-06-25,New York Yankees vs. Boston Red Sox · yes = New York Yankees,0,0
+1758,MLB,2025-05-03,KXMLBGAME-25MAY03ATHMIA-ATH,A's vs Miami Winner? · yes = A's,mlb-oak-mia-2025-05-03,Athletics vs. Marlins · yes = Athletics,0,0
+5054,MLB,2026-07-07,KXMLBGAME-26JUL071835CHCBAL-CHC,Chicago C vs Baltimore Winner? · yes = Chicago C,mlb-chc-bal-2026-07-07,Chicago Cubs vs. Baltimore Orioles · yes = Chicago Cubs,1,1
+2240,MLB,2025-06-08,KXMLBGAME-25JUN08NYMCOL-NYM,New York M vs Colorado Winner? · yes = New York M,mlb-nym-col-2025-06-08,Mets vs. Rockies · yes = Mets,1,1
+3320,MLB,2025-08-31,KXMLBGAME-25AUG31BALSF-BAL,Baltimore at San Francisco Winner? · yes = Baltimore,mlb-bal-sf-2025-08-31,Orioles vs. Giants · yes = Orioles,0,0
+4548,MLB,2026-05-29,KXMLBGAME-26MAY291915CHCSTL-CHC,Chicago C vs St. Louis Winner? · yes = Chicago C,mlb-chc-stl-2026-05-29,Chicago Cubs vs. St. Louis Cardinals · yes = Chicago Cubs,0,0
+5171,MLB,2026-07-18,KXMLBGAME-26JUL182205WSHATH-WSH,Washington vs A's Winner? · yes = Washington,mlb-wsh-oak-2026-07-18,Washington Nationals vs. Athletics · yes = Washington Nationals,0,0
+1722,MLB,2025-04-30,KXMLBGAME-25APR30AZNYM-AZ,Arizona vs New York M Winner? · yes = Arizona,mlb-ari-nym-2025-04-30,Diamondbacks vs. Mets · yes = Diamondbacks,1,1
+5574,MLB,2026-08-17,KXMLBGAME-26AUG172005CWSCHC-CWS,Chicago WS vs Chicago C Winner? · yes = Chicago WS,mlb-cws-chc-2026-08-17,Chicago White Sox vs. Chicago Cubs · yes = Chicago White Sox,0,0
+5083,MLB,2026-07-09,KXMLBGAME-26JUL091235ATLPIT-ATL,Atlanta vs Pittsburgh Winner? · yes = Atlanta,mlb-atl-pit-2026-07-09,Atlanta Braves vs. Pittsburgh Pirates · yes = Atlanta Braves,1,1
+5975,MLB,2026-09-16,KXMLBGAME-26SEP162010KCHOU-KC,Kansas City wins · yes = Kansas City,mlb-kc-hou-2026-09-16,Kansas City Royals vs. Houston Astros · yes = Kansas City Royals,1,1
+4672,MLB,2026-06-07,KXMLBGAME-26JUN071435CLETEX-CLE,Cleveland vs Texas Winner? · yes = Cleveland,mlb-cle-tex-2026-06-07,Cleveland Guardians vs. Texas Rangers · yes = Cleveland Guardians,0,0
+4068,MLB,2026-04-23,KXMLBGAME-26APR231310MILDET-MIL,Milwaukee vs Detroit Winner? · yes = Milwaukee,mlb-mil-det-2026-04-23,Milwaukee Brewers vs. Detroit Tigers · yes = Milwaukee Brewers,0,0
+2214,MLB,2025-06-06,KXMLBGAME-25JUN06ATLSF-ATL,Atlanta vs San Francisco Winner? · yes = Atlanta,mlb-atl-sf-2025-06-06,Braves vs. Giants · yes = Braves,0,0
+525,NBA,2026-01-11,KXNBAGAME-26JAN11NYKPOR-NYK,New York at Portland Winner? · yes = New York,nba-nyk-por-2026-01-11,Knicks vs. Trail Blazers · yes = Knicks,1,1
+1082,NBA,2026-04-01,KXNBAGAME-26APR01PHIWAS-PHI,Philadelphia at Washington Winner? · yes = Philadelphia,nba-phi-was-2026-04-01,76ers vs. Wizards · yes = 76ers,1,1
+715,NBA,2026-02-05,KXNBAGAME-26FEB05SASDAL-SAS,San Antonio at Dallas Winner? · yes = San Antonio,nba-sas-dal-2026-02-05,Spurs vs. Mavericks · yes = Spurs,1,1
+1356,NBA,2026-10-23,KXNBAGAME-26OCT23MEMGSW-MEM,Memphis wins · yes = Memphis,nba-mem-gsw-2026-10-23,Grizzlies vs. Warriors · yes = Grizzlies,1,1
+1277,NBA,2026-10-07,KXNBAGAME-26OCT07ORLMEM-ORL,Orlando wins · yes = Orlando,nba-orl-mem-2026-10-07,Magic vs. Grizzlies · yes = Magic,1,1
+536,NBA,2026-01-12,KXNBAGAME-26JAN12LALSAC-LAL,Los Angeles L at Sacramento Winner? · yes = Los Angeles L,nba-lal-sac-2026-01-12,Lakers vs. Kings · yes = Lakers,0,0
+454,NBA,2026-01-02,KXNBAGAME-26JAN02ATLNYK-ATL,Atlanta vs New York Winner? · yes = Atlanta,nba-atl-nyk-2026-01-02,Hawks vs. Knicks · yes = Hawks,1,1
+1026,NBA,2026-03-24,KXNBAGAME-26MAR24ORLCLE-ORL,Orlando at Cleveland Winner? · yes = Orlando,nba-orl-cle-2026-03-24,Magic vs. Cavaliers · yes = Magic,0,0
+432,NBA,2025-12-29,KXNBAGAME-25DEC29DALPOR-DAL,Dallas vs Portland Winner? · yes = Dallas,nba-dal-por-2025-12-29,Mavericks vs. Trail Blazers · yes = Mavericks,0,0
+325,NBA,2025-12-14,KXNBAGAME-25DEC14MILBKN-MIL,Milwaukee vs Brooklyn Winner? · yes = Milwaukee,nba-mil-bkn-2025-12-14,Bucks vs. Nets · yes = Bucks,0,0
+462,NBA,2026-01-03,KXNBAGAME-26JAN03PHINYK-PHI,Philadelphia vs New York Winner? · yes = Philadelphia,nba-phi-nyk-2026-01-03,76ers vs. Knicks · yes = 76ers,1,1
+862,NBA,2026-03-03,KXNBAGAME-26MAR03BKNMIA-BKN,Brooklyn at Miami Winner? · yes = Brooklyn,nba-bkn-mia-2026-03-03,Nets vs. Heat · yes = Nets,0,0
+1314,NBA,2026-10-14,KXNBAGAME-26OCT14CHIMIL-CHI,Chicago wins · yes = Chicago,nba-chi-mil-2026-10-14,Bulls vs. Bucks · yes = Bulls,1,1
+1350,NBA,2026-10-23,KXNBAGAME-26OCT23MINORL-MIN,Minnesota wins · yes = Minnesota,nba-min-orl-2026-10-23,Timberwolves vs. Magic · yes = Timberwolves,1,1
+1391,NBA,2026-10-28,KXNBAGAME-26OCT28ORLTOR-ORL,Orlando wins · yes = Orlando,nba-orl-tor-2026-10-28,Magic vs. Raptors · yes = Magic,0,0
+1199,NBA,2026-04-19,KXNBAGAME-26APR19ORLDET-ORL,Game 1: Orlando at Detroit Winner? · yes = Orlando,nba-orl-det-2026-04-19,Magic vs. Pistons · yes = Magic,1,1
+63,NBA,2025-10-24,KXNBAGAME-25OCT24WASDAL-WAS,Washington vs Dallas Winner? · yes = Washington,nba-was-dal-2025-10-24,Wizards vs. Mavericks · yes = Wizards,1,1
+1142,NBA,2026-04-09,KXNBAGAME-26APR09MIATOR-MIA,Miami at Toronto Winner? · yes = Miami,nba-mia-tor-2026-04-09,Heat vs. Raptors · yes = Heat,0,0
+186,NBA,2025-11-22,KXNBAGAME-25NOV22NYKORL-NYK,New York K vs Orlando Winner? · yes = New York K,nba-nyk-orl-2025-11-22,Knicks vs. Magic · yes = Knicks,0,0
+410,NBA,2025-12-27,KXNBAGAME-25DEC27NYKATL-NYK,New York vs Atlanta Winner? · yes = New York,nba-nyk-atl-2025-12-27,Knicks vs. Hawks · yes = Knicks,1,1
+507,NBA,2026-01-09,KXNBAGAME-26JAN09PHIORL-PHI,Philadelphia at Orlando Winner? · yes = Philadelphia,nba-phi-orl-2026-01-09,76ers vs. Magic · yes = 76ers,1,1
+498,NBA,2026-01-07,KXNBAGAME-26JAN07LALSAS-LAL,Los Angeles L at San Antonio Winner? · yes = Los Angeles L,nba-lal-sas-2026-01-07,Lakers vs. Spurs · yes = Lakers,0,0
+693,NBA,2026-02-03,KXNBAGAME-26FEB03DENDET-DEN,Denver at Detroit Winner? · yes = Denver,nba-den-det-2026-02-03,Nuggets vs. Pistons · yes = Nuggets,0,0
+735,NBA,2026-02-08,KXNBAGAME-26FEB08MIAWAS-MIA,Miami at Washington Winner? · yes = Miami,nba-mia-was-2026-02-08,Heat vs. Wizards · yes = Heat,1,1
+977,NBA,2026-03-18,KXNBAGAME-26MAR18GSWBOS-GSW,Golden State at Boston Winner? · yes = Golden State,nba-gsw-bos-2026-03-18,Warriors vs. Celtics · yes = Warriors,0,0
+1495,NFL,2026-10-11,KXNFLGAME-26OCT11CINMIA-CIN,Cincinnati wins · yes = Cincinnati,nfl-cin-mia-2026-10-11,Bengals vs. Dolphins · yes = Bengals,1,1
+1500,NFL,2026-10-11,KXNFLGAME-26OCT11HOUTEN-HOU,Houston wins · yes = Houston,nfl-hou-ten-2026-10-11,Texans vs. Titans · yes = Texans,1,1
+1497,NFL,2026-10-11,KXNFLGAME-26OCT11MINNO-MIN,Minnesota wins · yes = Minnesota,nfl-min-no-2026-10-11,Vikings vs. Saints · yes = Vikings,1,1
+1433,NFL,2026-08-22,KXNFLGAME-26AUG22KCTB-KC,Kansas City vs Tampa Bay Pro Football game: KC Chiefs wins? · yes = KC Chiefs,nfl-kc-tb-2026-08-22,Chiefs vs. Buccaneers · yes = Chiefs,0,0
+1465,NFL,2026-09-20,KXNFLGAME-26SEP20SEAARI-SEA,Seattle wins · yes = Seattle,nfl-sea-ari-2026-09-20,Seahawks vs. Cardinals · yes = Seahawks,1,1
+1487,NFL,2026-10-04,KXNFLGAME-26OCT04ARINYG-ARI,Arizona wins · yes = Arizona,nfl-ari-nyg-2026-10-04,Cardinals vs. Giants · yes = Cardinals,0,0
+1418,NFL,2026-08-14,KXNFLGAME-26AUG14DENATL-DEN,Will Denver win the Denver vs Atlanta Pro Football game? · yes = Denver,nfl-den-atl-2026-08-14,Broncos vs. Falcons · yes = Broncos,1,1
+1490,NFL,2026-10-04,KXNFLGAME-26OCT04MIAMIN-MIA,Miami wins · yes = Miami,nfl-mia-min-2026-10-04,Dolphins vs. Vikings · yes = Dolphins,0,0
+1471,NFL,2026-09-27,KXNFLGAME-26SEP27NYJDET-NYJ,New York J wins · yes = New York J,nfl-nyj-det-2026-09-27,Jets vs. Lions · yes = Jets,0,0
+1493,NFL,2026-10-04,KXNFLGAME-26OCT04DENSF-DEN,Denver wins · yes = Denver,nfl-den-sf-2026-10-04,Broncos vs. 49ers · yes = Broncos,0,0
+1472,NFL,2026-09-27,KXNFLGAME-26SEP27HOUIND-HOU,Houston wins · yes = Houston,nfl-hou-ind-2026-09-27,Texans vs. Colts · yes = Texans,0,0
+1514,NFL,2026-10-18,KXNFLGAME-26OCT18LACKC-LAC,Los Angeles C wins · yes = Los Angeles C,nfl-lac-kc-2026-10-18,Chargers vs. Chiefs · yes = Chargers,0,0
+1426,NFL,2026-08-21,KXNFLGAME-26AUG21NYJPIT-NYJ,New York vs Pittsburgh Pro Football game: NY Jets wins? · yes = NY Jets,nfl-nyj-pit-2026-08-21,Jets vs. Steelers · yes = Jets,1,1
+1498,NFL,2026-10-11,KXNFLGAME-26OCT11CLENYJ-CLE,Cleveland wins · yes = Cleveland,nfl-cle-nyj-2026-10-11,Browns vs. Jets · yes = Browns,0,0
+1511,NFL,2026-10-18,KXNFLGAME-26OCT18CARPHI-CAR,Carolina wins · yes = Carolina,nfl-car-phi-2026-10-18,Panthers vs. Eagles · yes = Panthers,1,1
+1513,NFL,2026-10-18,KXNFLGAME-26OCT18ARILAR-ARI,Arizona wins · yes = Arizona,nfl-ari-la-2026-10-18,Cardinals vs. Rams · yes = Cardinals,1,1
+1458,NFL,2026-09-20,KXNFLGAME-26SEP20CINHOU-CIN,Cincinnati wins · yes = Cincinnati,nfl-cin-hou-2026-09-20,Bengals vs. Texans · yes = Bengals,1,1
+1518,NFL,2026-10-25,KXNFLGAME-26OCT25CINBAL-CIN,Cincinnati wins · yes = Cincinnati,nfl-cin-bal-2026-10-25,Bengals vs. Ravens · yes = Bengals,1,1
+1435,NFL,2026-08-27,KXNFLGAME-26AUG27PITBUF-PIT,Pittsburgh vs Buffalo Pro Football game: Pittsburgh wins? · yes = Pittsburgh,nfl-pit-buf-2026-08-27,Steelers vs. Bills · yes = Steelers,0,0
+1510,NFL,2026-10-18,KXNFLGAME-26OCT18NONYG-NO,New Orleans wins · yes = New Orleans,nfl-no-nyg-2026-10-18,Saints vs. Giants · yes = Saints,1,1
+1456,NFL,2026-09-20,KXNFLGAME-26SEP20NOBAL-NO,New Orleans wins · yes = New Orleans,nfl-no-bal-2026-09-20,Saints vs. Ravens · yes = Saints,1,1
+1517,NFL,2026-10-25,KXNFLGAME-26OCT25SFATL-SF,San Francisco wins · yes = San Francisco,nfl-sf-atl-2026-10-25,49ers vs. Falcons · yes = 49ers,0,0
+1489,NFL,2026-10-04,KXNFLGAME-26OCT04GBTB-GB,Green Bay wins · yes = Green Bay,nfl-gb-tb-2026-10-04,Packers vs. Buccaneers · yes = Packers,1,1
+1459,NFL,2026-09-20,KXNFLGAME-26SEP20PITNE-PIT,Pittsburgh wins · yes = Pittsburgh,nfl-pit-ne-2026-09-20,Steelers vs. Patriots · yes = Steelers,0,0
+1524,NFL,2026-10-25,KXNFLGAME-26OCT25DENARI-DEN,Denver wins · yes = Denver,nfl-den-ari-2026-10-25,Broncos vs. Cardinals · yes = Broncos,1,1
+6921,NHL,2026-02-25,KXNHLGAME-26FEB25EDMANA-EDM,Edmonton at Anaheim Winner? · yes = EDM Oilers,nhl-edm-ana-2026-02-25,Oilers vs. Ducks · yes = Oilers,0,0
+7065,NHL,2026-03-18,KXNHLGAME-26MAR18STLCGY-STL,St. Louis at Calgary Winner? · yes = STL Blues,nhl-stl-cal-2026-03-18,Blues vs. Flames · yes = Blues,0,0
+6825,NHL,2026-01-23,KXNHLGAME-26JAN23ANASEA-ANA,Anaheim at Seattle Winner? · yes = ANA Ducks,nhl-ana-sea-2026-01-23,Ducks vs. Kraken · yes = Ducks,1,1
+6446,NHL,2025-11-18,KXNHLGAME-25NOV18NJTB-NJ,New Jersey vs Tampa Bay Winner? · yes = NJ Devils,nhl-nj-tb-2025-11-18,Devils vs. Lightning · yes = Devils,0,0
+6993,NHL,2026-03-07,KXNHLGAME-26MAR07NYISJ-NYI,New York I at San Jose Winner? · yes = NYI Islanders,nhl-nyi-sj-2026-03-07,Islanders vs. Sharks · yes = Islanders,1,1
+6915,NHL,2026-02-25,KXNHLGAME-26FEB25PHIWSH-PHI,Philadelphia at Washington Winner? · yes = PHI Flyers,nhl-phi-wsh-2026-02-25,Flyers vs. Capitals · yes = Flyers,0,0
+7530,NHL,2026-10-27,KXNHLGAME-26OCT27BOSCAR-BOS,Boston wins · yes = Boston,nhl-bos-car-2026-10-27,Bruins vs. Hurricanes · yes = Bruins,0,0
+6452,NHL,2025-11-19,KXNHLGAME-25NOV19EDMWSH-EDM,Edmonton vs Washington Winner? · yes = EDM Oilers,nhl-edm-wsh-2025-11-19,Oilers vs. Capitals · yes = Oilers,0,0
+6837,NHL,2026-01-25,KXNHLGAME-26JAN25NJSEA-NJ,New Jersey at Seattle Winner? · yes = NJ Devils,nhl-nj-sea-2026-01-25,Devils vs. Kraken · yes = Devils,0,0
+6438,NHL,2025-11-16,KXNHLGAME-25NOV16DETNYR-DET,Detroit vs New York R Winner? · yes = DET Red Wings,nhl-det-nyr-2025-11-16,Red Wings vs. Rangers · yes = Red Wings,1,1
+6945,NHL,2026-02-28,KXNHLGAME-26FEB28DETCAR-DET,Detroit at Carolina Winner? · yes = DET Red Wings,nhl-det-car-2026-02-28,Red Wings vs. Hurricanes · yes = Red Wings,0,0
+6680,NHL,2026-01-01,KXNHLGAME-26JAN01TBLA-TB,Tampa Bay vs Los Angeles Winner? · yes = TB Lightning,nhl-tb-lak-2026-01-01,Lightning vs. Kings · yes = Lightning,1,1
+6818,NHL,2026-01-22,KXNHLGAME-26JAN22OTTNSH-OTT,Ottawa at Nashville Winner? · yes = OTT Senators,nhl-ott-nsh-2026-01-22,Senators vs. Predators · yes = Senators,0,0
+6180,NHL,2025-10-08,KXNHLGAME-25OCT08BOSWSH-BOS,Boston vs Washington Winner? · yes = Boston,nhl-bos-wsh-2025-10-08,Bruins vs. Capitals · yes = Bruins,1,1
+7241,NHL,2026-04-13,KXNHLGAME-26APR13DETTB-DET,Detroit at Tampa Bay Winner? · yes = DET Red Wings,nhl-det-tb-2026-04-13,Red Wings vs. Lightning · yes = Red Wings,0,0
+6548,NHL,2025-12-03,KXNHLGAME-25DEC03UTAANA-UTA,Utah vs Anaheim Winner? · yes = UTA Mammoth,nhl-utah-ana-2025-12-03,Utah vs. Ducks · yes = Utah,1,1
+7190,NHL,2026-04-05,KXNHLGAME-26APR05BOSPHI-BOS,Boston at Philadelphia Winner? · yes = BOS Bruins,nhl-bos-phi-2026-04-05,Bruins vs. Flyers · yes = Bruins,0,0
+6693,NHL,2026-01-03,KXNHLGAME-26JAN03NSHCGY-NSH,Nashville vs Calgary Winner? · yes = NSH Predators,nhl-nsh-cal-2026-01-03,Predators vs. Flames · yes = Predators,1,1
+6197,NHL,2025-10-11,KXNHLGAME-25OCT11NJTB-NJ,New Jersey vs Tampa Bay Winner? · yes = New Jersey,nhl-nj-tb-2025-10-11,Devils vs. Lightning · yes = Devils,1,1
+6176,NHL,2025-10-04,KXNHLGAME-25OCT04STLCHI-STL,St. Louis vs Chicago Winner? · yes = St. Louis,nhl-stl-chi-2025-10-04,Blues vs. Blackhawks · yes = Blues,1,1
+6487,NHL,2025-11-24,KXNHLGAME-25NOV24PHITB-PHI,Philadelphia vs Tampa Bay Winner? · yes = PHI Flyers,nhl-phi-tb-2025-11-24,Flyers vs. Lightning · yes = Flyers,0,0
+6226,NHL,2025-10-15,KXNHLGAME-25OCT15CGYUTA-CGY,Calgary vs Utah Winner? · yes = Calgary,nhl-cal-utah-2025-10-15,Flames vs. Utah · yes = Flames,0,0
+6412,NHL,2025-11-12,KXNHLGAME-25NOV12NJCHI-NJ,New Jersey vs Chicago Winner? · yes = NJ Devils,nhl-nj-chi-2025-11-12,Devils vs. Blackhawks · yes = Devils,1,1
+6931,NHL,2026-02-26,KXNHLGAME-26FEB26CGYSJ-CGY,Calgary at San Jose Winner? · yes = CGY Flames,nhl-cal-sj-2026-02-26,Flames vs. Sharks · yes = Flames,1,1
+6557,NHL,2025-12-04,KXNHLGAME-25DEC04SEAEDM-SEA,Seattle vs Edmonton Winner? · yes = SEA Kraken,nhl-sea-edm-2025-12-04,Kraken vs. Oilers · yes = Kraken,0,0
