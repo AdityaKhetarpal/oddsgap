@@ -1,0 +1,26 @@
+name: Download prices
+# Runs notebook 03 (price histories for the sampled pairs) and commits the result.
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install pandas pyarrow numpy requests jupytext nbclient ipykernel
+      - name: Notebook 03
+        run: python scripts/run_notebooks.py 03
+      - name: Commit prices
+        if: always()
+        run: |
+          git config user.name "Aditya Khetarpal"
+          git config user.email "80028073+AdityaKhetarpal@users.noreply.github.com"
+          git add data notebooks/03_prices.ipynb
+          git commit -m "Data: price histories for the sampled pairs" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
