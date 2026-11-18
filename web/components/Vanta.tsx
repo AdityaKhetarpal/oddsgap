@@ -15,7 +15,7 @@ function load(src: string) {
   });
 }
 
-// A faint Vanta.js "net" behind the opening screen: the market's noise behind a steady SIP line.
+// A faint Vanta.js "net" behind the opening screen: many traders, one price.
 // Skipped for reduced motion and on small screens.
 export default function Vanta() {
   const ref = useRef<HTMLDivElement>(null);
@@ -30,7 +30,7 @@ export default function Vanta() {
         if (cancelled || !ref.current || !window.VANTA) return;
         effect = window.VANTA.NET({
           el: ref.current, mouseControls: false, touchControls: false, gyroControls: false,
-          color: dark ? 0x26303a : 0xd5dbe0, backgroundColor: dark ? 0x0a0d10 : 0xffffff,
+          color: dark ? 0x26303a : 0xd5dbe0, backgroundColor: dark ? 0x0b0d11 : 0xffffff,
           points: 9, maxDistance: 22, spacing: 18, showDots: true, scale: 1, scaleMobile: 1,
         });
       })
