@@ -108,7 +108,7 @@ games = pd.DataFrame({
     "poly_result": merged["prices_l"].map(lambda p: 1 if str(p[0]) in ("1", "1.0") else 0 if str(p[0]) in ("0", "0.0") else np.nan),
     "kalshi_volume": merged["volume_k"], "poly_volume": merged["volume_p"],
     "kalshi_open": merged["open_time"], "kalshi_close": merged["close_time"],
-    "poly_close": pd.to_datetime(merged["closed_time"], utc=True, errors="coerce"),
+    "poly_close": pd.to_datetime(merged["closed_time"], utc=True, errors="coerce", format="mixed"),
 })
 games = games.drop_duplicates("kalshi_ticker")
 print(len(games), "matched games;", games.groupby("category").size().to_dict())
@@ -146,7 +146,7 @@ fed = pd.DataFrame({
     "poly_result": m["prices_l"].map(lambda p: 1 if str(p[0]) in ("1", "1.0") else 0 if str(p[0]) in ("0", "0.0") else np.nan),
     "kalshi_volume": m["volume_k"], "poly_volume": m["volume_p"],
     "kalshi_open": m["open_time"], "kalshi_close": m["close_time"],
-    "poly_close": pd.to_datetime(m["closed_time"], utc=True, errors="coerce"),
+    "poly_close": pd.to_datetime(m["closed_time"], utc=True, errors="coerce", format="mixed"),
 })
 print(len(fed), "Fed outcome pairs over", m["meeting"].nunique(), "meetings")
 fed[["date", "kalshi_question", "poly_question", "kalshi_result", "poly_result"]].head(6)

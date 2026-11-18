@@ -80,8 +80,8 @@ data[["ticker", "event_ticker", "yes_sub_title", "close_time", "result", "volume
 keep = ["ticker", "event_ticker", "series_ticker", "league", "title", "yes_sub_title", "open_time", "close_time",
         "result", "volume_fp", "volume", "status"]
 data = data[[c for c in keep if c in data.columns]].copy()
-data["close_time"] = pd.to_datetime(data["close_time"], utc=True)
-data["open_time"] = pd.to_datetime(data["open_time"], utc=True)
+data["close_time"] = pd.to_datetime(data["close_time"], utc=True, format="ISO8601")
+data["open_time"] = pd.to_datetime(data["open_time"], utc=True, format="ISO8601")
 data["volume"] = pd.to_numeric(data.get("volume_fp", data.get("volume")), errors="coerce")   # contracts traded ($1 each at most)
 data = data[(data["close_time"] >= WINDOW[0]) & (data["close_time"] < pd.Timestamp(WINDOW[1]) + pd.Timedelta(days=1))]
 data = data[data["result"].isin(["yes", "no"])]                                              # drop voided markets
