@@ -1,0 +1,11 @@
+pandas
+pyarrow
+numpy
+scipy
+requests
+duckdb
+scikit-learn
+sentence-transformers
+jupytext
+nbclient
+ipykernel
