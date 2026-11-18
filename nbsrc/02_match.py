@@ -28,6 +28,9 @@ kg["code"] = kg["ticker"].str.rsplit("-", n=1).str[-1].str.lower()          # e.
 d = kg["event_ticker"].str.extract(r"-(\d{2})([A-Z]{3})(\d{2})")
 kg["date"] = pd.to_datetime("20" + d[0] + "-" + d[1].map(MONTHS).astype("Int64").astype(str).str.zfill(2) + "-" + d[2], errors="coerce").dt.date
 kg = kg[kg["code"] != "tie"]                                                   # no tie markets in these four leagues, but be safe
+doubleheader = kg["event_ticker"].str.contains(r"G[12]$", regex=True)       # Kalshi marks doubleheader games G1 and G2
+print(int(kg.loc[doubleheader, "event_ticker"].nunique()), "doubleheader games dropped (the two platforms can't be lined up reliably)")
+kg = kg[~doubleheader]
 teams_per_event = kg.groupby("event_ticker")["code"].apply(lambda s: tuple(sorted(s)))
 kg["teams"] = kg["event_ticker"].map(teams_per_event)
 kg = kg[kg["teams"].map(len) == 2]
@@ -158,6 +161,11 @@ fed[["date", "kalshi_question", "poly_question", "kalshi_result", "poly_result"]
 
 # %%
 pairs = pd.concat([games, fed], ignore_index=True)
+# Same event means the two markets closed close together. A big gap means a rescheduled game or a different event with the same label.
+pairs["close_gap_hours"] = (pd.to_datetime(pairs["kalshi_close"], utc=True) - pairs["poly_close"]).abs().dt.total_seconds() / 3600
+far = pairs["close_gap_hours"].isna() | (pairs["close_gap_hours"] > 24)
+print(int(far.sum()), "pairs dropped because the two platforms closed more than 24 hours apart:", pairs[far].groupby("category").size().to_dict())
+pairs = pairs[~far].reset_index(drop=True)
 pairs["pair_id"] = np.arange(len(pairs))
 pairs["liquid"] = (pairs["kalshi_volume"] >= MIN_VOLUME) & (pairs["poly_volume"] >= MIN_VOLUME)
 pairs["settled_differently"] = pairs["poly_result"].notna() & (pairs["kalshi_result"] != pairs["poly_result"])

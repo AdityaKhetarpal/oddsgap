@@ -10,3 +10,8 @@
   3. Doubleheader second games (Polymarket slugs ending in "-2") are skipped, because Kalshi tells the two games apart only by start time.
   4. Polymarket's 3-hour price timestamps are taken as the time of the price; Kalshi's hourly candles are labelled by their end.
      If Polymarket labels the *start* of each bucket instead, prices could be offset by up to 3 hours. This is listed as a limit.
+- 2026-11-18 · oddsgap-plan · **Matching fixes after the first market-list run, before any price was downloaded.**
+  The check of pairs that settled differently found two matching problems, now fixed by rule: (1) MLB doubleheader games
+  (Kalshi tickers ending G1/G2) were paired with the wrong Polymarket game, so all doubleheader games are dropped; (2) a few
+  pairs closed days or months apart (rescheduled games; one Polymarket Fed event that closed in May for a September meeting),
+  so pairs must close within 24 hours of each other. Coverage note: Polymarket's NFL series only lists the 2026 season.
