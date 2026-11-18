@@ -102,6 +102,7 @@ SELECT CASE WHEN hours_to_close < 6 THEN '3–6 h'
        COUNT(*)                                            AS points,
        COUNT(DISTINCT pair_id)                             AS pairs,
        MEDIAN(gap_pp)                                      AS median_gap_pp,
+       AVG(gap_pp)                                         AS mean_gap_pp,
        QUANTILE_CONT(gap_pp, 0.75)                         AS p75_gap_pp
 FROM comparable
 WHERE pair_id IN (SELECT pair_id FROM pair_gaps)

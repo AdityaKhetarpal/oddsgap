@@ -19,6 +19,8 @@ export const overview = overviewJson as unknown as {
     h1: Boot; h2: Boot & { far_median: number; near_median: number };
     h3: Boot & { brier_kalshi: number; brier_polymarket: number; better: string | null };
     lead: { same_step: number; kalshi_then_poly: number; poly_then_kalshi: number; steps: number };
+    detail: { mean_gap_per_pair_median: number; mean_gap_all_points: number; identical_share: number; over_5pp_share: number };
+    alignment: { best_shift: number; table: { shift_steps: number; points: number; mean_gap_pp: number }[] };
     pre_registered: string; pairs_tested: number; points: number;
     by_category: Category[];
     mismatches: { category: string; date: string; kalshi_ticker: string; poly_slug: string; kalshi_result: number; poly_result: number; close_gap_hours: number }[];
@@ -28,7 +30,7 @@ export const overview = overviewJson as unknown as {
   aliases: Record<string, string>;
   hero: Pair;
 };
-export const curve = curveJson as { time_left: string; points: number; pairs: number; median_gap_pp: number; p75_gap_pp: number }[];
+export const curve = curveJson as { time_left: string; points: number; pairs: number; median_gap_pp: number; mean_gap_pp: number; p75_gap_pp: number }[];
 export const explorer = explorerJson as unknown as Pair[];
 
 export const CATEGORY_NAME: Record<string, string> = { NBA: "NBA games", NFL: "NFL games", MLB: "MLB games", NHL: "NHL games", Fed: "Fed rate decisions" };

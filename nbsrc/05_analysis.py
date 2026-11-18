@@ -111,10 +111,42 @@ mismatch = pairs[pairs["settled_differently"]][["category", "date", "kalshi_tick
 mismatch
 
 # %% [markdown]
+# ### Reported, not deciding: average gaps and identical prices
+# Both platforms quote in steps of half a cent or a cent, so per-pair medians land on round steps (0.5, 0.75, 1.0 …).
+# The average gap per pair and the share of moments with *identical* prices give a finer picture.
+
+# %%
+pair_mean = comp.groupby("pair_id")["gap_pp"].mean()
+detail = {"mean_gap_per_pair_median": float(pair_mean.median()), "mean_gap_all_points": float(comp["gap_pp"].mean()),
+          "identical_share": float((comp["gap_pp"] < 1e-9).mean() * 100), "over_5pp_share": float((comp["gap_pp"] >= 5).mean() * 100)}
+detail
+
+# %% [markdown]
+# ### Check: are the two series lined up in time?
+# The plan flagged a risk: Polymarket's 3-hour timestamps might mark the start of each step, not the end. If so, shifting its
+# series by one step would bring the two prices closer. We try shifts of −2 to +2 steps and keep the result.
+
+# %%
+prices = pd.read_parquet(OUT / "prices.parquet")
+k = prices[prices["platform"] == "kalshi"][["pair_id", "ts", "price"]].rename(columns={"price": "k"})
+pm = prices[prices["platform"] == "polymarket"][["pair_id", "ts", "price"]].rename(columns={"price": "p"})
+k = k[k["pair_id"].isin(gaps["pair_id"])]
+shifts = []
+for step in [-2, -1, 0, 1, 2]:
+    m = k.merge(pm.assign(ts=pm["ts"] + step * 10800), on=["pair_id", "ts"])
+    m = m[m["k"].between(0.03, 0.97) & m["p"].between(0.03, 0.97)]
+    shifts.append({"shift_steps": step, "points": int(len(m)), "mean_gap_pp": float((m["k"] - m["p"]).abs().mean() * 100)})
+shifts = pd.DataFrame(shifts)
+best = int(shifts.loc[shifts["mean_gap_pp"].idxmin(), "shift_steps"])
+print("best alignment:", best, "steps (0 means the timestamps line up as assumed)")
+shifts.round(3)
+
+# %% [markdown]
 # ### Save
 
 # %%
-results = {"h1": h1, "h2": h2, "h3": h3, "lead": lead, "pre_registered": "2026-11-18",
+results = {"h1": h1, "h2": h2, "h3": h3, "lead": lead, "detail": detail,
+           "alignment": {"best_shift": best, "table": shifts.to_dict("records")}, "pre_registered": "2026-11-18",
            "pairs_tested": int(len(gaps)), "points": int(len(comp)),
            "by_category": by_cat.to_dict("records"),
            "mismatches": mismatch.assign(date=mismatch["date"].astype(str)).to_dict("records")}

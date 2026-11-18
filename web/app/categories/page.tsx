@@ -10,22 +10,22 @@ export const metadata: Metadata = {
 export default function Categories() {
   const rows = overview.results.by_category;
   const cov = Object.fromEntries(overview.coverage.map((c) => [c.category, c]));
-  const widest = [...rows].sort((a, b) => b.gap_pp - a.gap_pp)[0];
-  const tightest = [...rows].sort((a, b) => a.gap_pp - b.gap_pp)[0];
+  const most = [...rows].sort((a, b) => b.share_over_2pp - a.share_over_2pp)[0];
+  const games = rows.filter((c) => c.category !== most.category).map((c) => c.share_over_2pp);
   return (
     <div className="wrap">
       <div className="head">
         <div className="kicker">By category</div>
         <h1>Where the two markets disagree most</h1>
         <p>
-          {CATEGORY_NAME[widest.category]} had the widest typical gap ({widest.gap_pp.toFixed(1)} points) and {CATEGORY_NAME[tightest.category].toLowerCase()} the
-          narrowest ({tightest.gap_pp.toFixed(1)} points).
+          {CATEGORY_NAME[most.category]}: {most.share_over_2pp.toFixed(0)}% of pairs differed by 2 points or more, against{" "}
+          {Math.min(...games).toFixed(0)}–{Math.max(...games).toFixed(0)}% in the other categories. Typical gaps everywhere are about a point or less.
         </p>
       </div>
 
       <section className="card" data-reveal>
-        <h2>Median gap per pair, in points</h2>
-        <Bars rows={rows.map((c) => ({ label: CATEGORY_NAME[c.category], value: c.gap_pp }))} unit=" pts" label="Median gap per pair by category" />
+        <h2>Share of pairs that differed by 2 points or more</h2>
+        <Bars rows={rows.map((c) => ({ label: CATEGORY_NAME[c.category], value: c.share_over_2pp }))} unit="%" label="Share of pairs with a median gap of 2 points or more, by category" />
         <p className="source">Source: Kalshi and Polymarket public APIs, Jan 2025 to Oct 2026. Each pair counts once.</p>
       </section>
 

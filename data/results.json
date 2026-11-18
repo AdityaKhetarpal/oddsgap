@@ -1,0 +1,182 @@
+{
+ "h1": {
+  "value": 0.7500000000000007,
+  "low": 0.7500000000000007,
+  "high": 0.9999999999999898,
+  "n": 1457,
+  "verdict": "rejected"
+ },
+ "h2": {
+  "value": 0.9999999999999996,
+  "low": 0.7500000000000091,
+  "high": 1.0000000000000009,
+  "n": 510,
+  "far_median": 1.0000000000000009,
+  "near_median": 0.0,
+  "verdict": "supported"
+ },
+ "h3": {
+  "value": 0.000263980769230772,
+  "low": -0.00015774405048076765,
+  "high": 0.000680918063186817,
+  "n": 1456,
+  "brier_kalshi": 0.2256150412087912,
+  "brier_polymarket": 0.2253510604395604,
+  "verdict": "supported",
+  "better": null
+ },
+ "lead": {
+  "same_step": 0.5002625929813452,
+  "kalshi_then_poly": 0.005796426623020317,
+  "poly_then_kalshi": -0.017876342648696704,
+  "steps": 30063
+ },
+ "detail": {
+  "mean_gap_per_pair_median": 1.0833333333333341,
+  "mean_gap_all_points": 1.3708330372581066,
+  "identical_share": 24.586086832942513,
+  "over_5pp_share": 4.725360619626234
+ },
+ "alignment": {
+  "best_shift": 0,
+  "table": [
+   {
+    "shift_steps": -2,
+    "points": 41792,
+    "mean_gap_pp": 1.8502500478560489
+   },
+   {
+    "shift_steps": -1,
+    "points": 42423,
+    "mean_gap_pp": 1.7270207198925112
+   },
+   {
+    "shift_steps": 0,
+    "points": 42860,
+    "mean_gap_pp": 1.3609892673821748
+   },
+   {
+    "shift_steps": 1,
+    "points": 42750,
+    "mean_gap_pp": 1.8189953216374268
+   },
+   {
+    "shift_steps": 2,
+    "points": 42577,
+    "mean_gap_pp": 1.895659628437889
+   }
+  ]
+ },
+ "pre_registered": "2026-11-18",
+ "pairs_tested": 1457,
+ "points": 42219,
+ "by_category": [
+  {
+   "category": "NHL",
+   "pairs": 535,
+   "gap_pp": 0.9999999999999953,
+   "low": 0.7500000000000007,
+   "high": 0.9999999999999981,
+   "share_over_2pp": 7.102803738317758,
+   "kalshi_higher_pp": 0.0,
+   "brier_kalshi": 0.2426249065420561,
+   "brier_polymarket": 0.2425901401869159,
+   "brier_pairs": 535
+  },
+  {
+   "category": "NBA",
+   "pairs": 497,
+   "gap_pp": 0.7500000000000007,
+   "low": 0.7499999999999979,
+   "high": 0.9999999999999898,
+   "share_over_2pp": 2.8169014084507045,
+   "kalshi_higher_pp": 0.0,
+   "brier_kalshi": 0.21420140845070423,
+   "brier_polymarket": 0.2135377263581489,
+   "brier_pairs": 497
+  },
+  {
+   "category": "MLB",
+   "pairs": 270,
+   "gap_pp": 0.7500000000000007,
+   "low": 0.7500000000000007,
+   "high": 0.9999999999999981,
+   "share_over_2pp": 4.074074074074074,
+   "kalshi_higher_pp": 0.0,
+   "brier_kalshi": 0.24231394052044605,
+   "brier_polymarket": 0.24261462453531604,
+   "brier_pairs": 269
+  },
+  {
+   "category": "NFL",
+   "pairs": 114,
+   "gap_pp": 0.5000000000000004,
+   "low": 0.5000000000000004,
+   "high": 0.5000000000000004,
+   "share_over_2pp": 1.7543859649122806,
+   "kalshi_higher_pp": 0.0,
+   "brier_kalshi": 0.23508048245614033,
+   "brier_polymarket": 0.2344394736842105,
+   "brier_pairs": 114
+  },
+  {
+   "category": "Fed",
+   "pairs": 41,
+   "gap_pp": 1.0000000000000064,
+   "low": 1.0000000000000009,
+   "high": 1.5,
+   "share_over_2pp": 26.82926829268293,
+   "kalshi_higher_pp": 0.0,
+   "brier_kalshi": 0.006132926829268293,
+   "brier_polymarket": 0.005066707317073171,
+   "brier_pairs": 41
+  }
+ ],
+ "mismatches": [
+  {
+   "category": "NBA",
+   "date": "2025-10-10",
+   "kalshi_ticker": "KXNBAGAME-25OCT10ORLPHI-ORL",
+   "poly_slug": "nba-orl-phi-2025-10-10",
+   "kalshi_result": 0,
+   "poly_result": 1,
+   "close_gap_hours": 3.884758846111111
+  },
+  {
+   "category": "NBA",
+   "date": "2025-10-10",
+   "kalshi_ticker": "KXNBAGAME-25OCT10BOSTOR-BOS",
+   "poly_slug": "nba-bos-tor-2025-10-10",
+   "kalshi_result": 1,
+   "poly_result": 0,
+   "close_gap_hours": 3.986994973055556
+  },
+  {
+   "category": "MLB",
+   "date": "2025-07-04",
+   "kalshi_ticker": "KXMLBGAME-25JUL04HOULAD-HOU",
+   "poly_slug": "mlb-hou-lad-2025-07-04",
+   "kalshi_result": 1,
+   "poly_result": 0,
+   "close_gap_hours": 1.796325228888889
+  },
+  {
+   "category": "MLB",
+   "date": "2026-09-25",
+   "kalshi_ticker": "KXMLBGAME-26SEP251905BALNYY-BAL",
+   "poly_slug": "mlb-bal-nyy-2026-09-25",
+   "kalshi_result": 0,
+   "poly_result": 1,
+   "close_gap_hours": 3.1980555555555554
+  },
+  {
+   "category": "MLB",
+   "date": "2026-09-26",
+   "kalshi_ticker": "KXMLBGAME-26SEP261915BALNYY-BAL",
+   "poly_slug": "mlb-bal-nyy-2026-09-26",
+   "kalshi_result": 1,
+   "poly_result": 0,
+   "close_gap_hours": 4.289166666666667
+  }
+ ]
+}

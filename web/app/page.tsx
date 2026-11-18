@@ -13,7 +13,10 @@ export default function Home() {
   const over2pct = (100 * over2) / r.pairs_tested;
   const brierK = r.h3.brier_kalshi, brierP = r.h3.brier_polymarket;
   const lead = r.lead;
-  const leader = Math.abs(lead.kalshi_then_poly - lead.poly_then_kalshi) < 0.02 ? null : lead.kalshi_then_poly > lead.poly_then_kalshi ? "Kalshi" : "Polymarket";
+  // a leader only if one direction shows a real (|r| > 0.05) and clearly larger link
+  const leader = Math.max(Math.abs(lead.kalshi_then_poly), Math.abs(lead.poly_then_kalshi)) < 0.05 ? null : lead.kalshi_then_poly > lead.poly_then_kalshi ? "Kalshi" : "Polymarket";
+  const d = r.detail;
+  const g = (v: number) => (v < 1 ? v.toFixed(2) : v.toFixed(1));
 
   return (
     <>
@@ -21,17 +24,17 @@ export default function Home() {
         <Vanta />
         <div className="wrap hero-grid">
           <div>
-            <div className="kicker">Kalshi vs Polymarket · {num(r.pairs_tested)} identical questions, priced every 3 hours</div>
-            <h1 className="display">Same question, {gap < 2 ? "nearly the same" : "different"} odds: a typical gap of {gap.toFixed(1)} points.</h1>
+            <div className="kicker">Kalshi vs Polymarket · {num(t.matched)} identical questions matched, {num(r.pairs_tested)} priced every 3 hours</div>
+            <h1 className="display">Same question, {gap < 2 ? "nearly the same" : "different"} odds: a typical gap of {g(gap)} points.</h1>
             <p className="lead">
               We matched {num(t.matched)} yes/no questions that both platforms listed (NBA, NFL, MLB and NHL games, and Fed rate decisions,
-              January 2025 to October 2026) and compared the two prices every 3 hours. A gap of {gap.toFixed(1)} percentage points means, for
-              example, {(50 + gap / 2).toFixed(1)}% on one and {(50 - gap / 2).toFixed(1)}% on the other.
+              January 2025 to October 2026) and compared the two prices every 3 hours, {num(r.points)} times. A gap of {g(gap)} percentage points means, for
+              example, {(50 + gap / 2).toFixed(2)}% on one and {(50 - gap / 2).toFixed(2)}% on the other. A quarter of the time the two prices were identical.
             </p>
             <div className="stats">
-              <div className="stat"><b>{pp(gap)}</b><span>median gap per pair (90% range {r.h1.low.toFixed(1)}–{r.h1.high.toFixed(1)})</span></div>
+              <div className="stat"><b>{g(gap)} pts</b><span>median gap per pair (90% range {r.h1.low.toFixed(2)}–{r.h1.high.toFixed(2)})</span></div>
               <div className="stat"><b>{over2pct.toFixed(0)}%</b><span>of pairs differed by 2 points or more</span></div>
-              <div className="stat"><b>{num(r.points)}</b><span>moments where both prices were compared</span></div>
+              <div className="stat"><b>{d.identical_share.toFixed(0)}%</b><span>of moments with identical prices on both</span></div>
               <div className="stat"><b>{t.correct} of {t.reviewed}</b><span>matches correct when checked by hand</span></div>
             </div>
             <div className="actions">
@@ -46,7 +49,7 @@ export default function Home() {
               <div className="qp">{hero.poly_question}</div>
             </div>
             <PairChart series={hero.series} draw height={260} />
-            <p className="source">Chosen by a fixed rule: the much-traded pair whose gap ({pp(hero.gap_pp)}) is closest to the overall median.</p>
+            <p className="source">Chosen by a fixed rule: the much-traded pair whose gap ({g(hero.gap_pp)} pts) is closest to the overall median. The lines overlap where the prices were equal.</p>
           </div>
         </div>
       </section>
@@ -55,12 +58,12 @@ export default function Home() {
         <section className="section" data-reveal>
           <h2>Does the gap close as the end gets near?</h2>
           <p className="sub">
-            Median gap between the two prices, by time left before the market closed. The last 3 hours are left out, because prices there
-            jump to 0% or 100%.
+            Average gap between the two prices, by time left before the market closed. The last 3 hours are left out, because prices there
+            jump to 0% or 100%. (The locked test uses medians; averages show the same shape more finely, because prices move in half-cent steps.)
           </p>
           <div className="card" style={{ marginTop: 16 }}>
-            <Bars rows={curve.map((c) => ({ label: c.time_left, value: c.median_gap_pp }))} unit=" pts" label="Median gap in points by time left before the close" />
-            <p className="source">Points, all {num(r.pairs_tested)} tested pairs. Source: Kalshi and Polymarket public APIs, Jan 2025 to Oct 2026.</p>
+            <Bars rows={curve.map((c) => ({ label: c.time_left, value: c.mean_gap_pp }))} unit=" pts" label="Average gap in points by time left before the close" />
+            <p className="source">Every comparable 3-hour point across {num(r.pairs_tested)} tested pairs. Source: Kalshi and Polymarket public APIs, Jan 2025 to Oct 2026.</p>
           </div>
         </section>
 
@@ -72,7 +75,7 @@ export default function Home() {
               <span className="tag">Locked test 1</span>
               <div className="q">Do the two platforms disagree by 2 points or more?</div>
               <div className="a">{r.h1.verdict === "supported" ? "Yes." : r.h1.verdict === "rejected" ? "No: the gap is smaller." : "Too close to call."}</div>
-              <p className="small">The median pair gap is {pp(gap, 2)}, with a 90% range of {r.h1.low.toFixed(2)} to {r.h1.high.toFixed(2)} over {num(r.h1.n)} pairs.</p>
+              <p className="small">The median pair gap is {pp(gap, 2)}, with a 90% range of {r.h1.low.toFixed(2)} to {r.h1.high.toFixed(2)} over {num(r.h1.n)} pairs. Only {(over2pct).toFixed(0)}% of pairs differed by 2 points or more.</p>
             </article>
             <article className="card verdict">
               <span className="tag">Locked test 2</span>

@@ -7,7 +7,7 @@ export default function Bars({ rows, unit = "", label }: { rows: { label: string
         <div key={r.label} className="hbar">
           <span className="hl">{r.label}</span>
           <span className="ht"><span className="hf" style={{ width: `${(r.value / max) * 100}%` }} /></span>
-          <span className="hv">{r.value.toFixed(2)}{unit}</span>
+          <span className="hv">{r.value.toFixed(unit === "%" ? 0 : 2)}{unit}</span>
         </div>
       ))}
     </div>

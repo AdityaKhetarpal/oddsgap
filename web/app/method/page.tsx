@@ -97,7 +97,9 @@ export default function Method() {
         <h2>Limits</h2>
         <ul>
           <li><b>3-hour steps.</b> Fast moves inside a step are invisible, so &ldquo;who moves first&rdquo; is a rough reading.</li>
-          <li><b>Time stamps.</b> We treat Polymarket&apos;s 3-hour timestamps as the time of the price. If they mark the start of each bucket instead, the two series could be up to 3 hours apart.</li>
+          <li><b>Time stamps, checked.</b> We treat Polymarket&apos;s 3-hour timestamps as the time of the price. Shifting its series one or two steps either way only widened the average gap
+            (best fit: {r.alignment.best_shift === 0 ? "no shift" : `${r.alignment.best_shift} steps`}; {r.alignment.table.map((s) => `${s.shift_steps > 0 ? "+" : ""}${s.shift_steps}: ${s.mean_gap_pp.toFixed(2)}`).join(", ")} pts), so the two series line up as assumed.</li>
+          <li><b>Price steps.</b> Both platforms quote in half-cent or cent steps, so medians land on round values (0.5, 0.75, 1.0). The average gap per pair (median {r.detail.mean_gap_per_pair_median.toFixed(2)} pts) is reported alongside.</li>
           <li><b>Two different crowds.</b> Kalshi is a US-regulated exchange (US users, dollar accounts); Polymarket runs on crypto rails. Fees and the cost of moving money
             between them are reasons small gaps can last. We don&apos;t measure them.</li>
           <li><b>Mostly sports.</b> Games dominate the sample; only {r.by_category.find((c) => c.category === "Fed")?.pairs ?? 0} Fed outcomes were tested.</li>
