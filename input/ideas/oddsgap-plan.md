@@ -66,7 +66,7 @@ close near the end, and which platform is more accurate?
 - [ ] H1, H2 and H3 exactly as defined above → `data/results.json`
 - [ ] The reported-only checks: categories, who moves first, resolution mismatches
 ### 6 · Export (`notebooks/06_export.ipynb`) → `web/public/data/*.json`, each under 1 MB
-### 7 · Website (Next.js on Vercel): design-council → ux-copy → design-critique and design-review → deploy at oddsgap.vercel.app
+### 7 · Website (Next.js on Vercel): design-council → ux-copy → design-critique and design-review → deploy at odds-gap.vercel.app
 ### 8 · README with results, 3 CV bullets
 
 ## Done when

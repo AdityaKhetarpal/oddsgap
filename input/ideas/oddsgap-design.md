@@ -43,7 +43,7 @@ from India); single-platform calibration (already published).
 - **Window:** markets that closed between 1 Jan 2025 and 31 Oct 2026.
 
 ## Output
-☑ GitHub repo + live website at oddsgap.vercel.app · ☑ README with measured numbers and CV bullets
+☑ GitHub repo + live website at odds-gap.vercel.app · ☑ README with measured numbers and CV bullets
 
 ## Expected results
 A clear gap figure (for example, "the median matched pair differed by X points"), whether it shrinks near the close,

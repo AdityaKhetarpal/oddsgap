@@ -5,7 +5,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Motion from "@/components/Motion";
 
-const SITE = "https://oddsgap.vercel.app";
+const SITE = "https://odds-gap.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),

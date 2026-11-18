@@ -2,7 +2,7 @@
 
 **Same event, two prices: when Kalshi and Polymarket list the same yes/no question, how far apart are their odds?**
 
-Live site: **[oddsgap.vercel.app](https://oddsgap.vercel.app)**
+Live site: **[odds-gap.vercel.app](https://odds-gap.vercel.app)**
 
 7,556 identical questions matched across the two biggest prediction markets: NBA, NFL, MLB and NHL games, and Fed rate decisions,
 January 2025 to October 2026. The test was locked **before** any data was downloaded:
