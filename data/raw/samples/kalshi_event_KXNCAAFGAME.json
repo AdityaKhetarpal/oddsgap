@@ -1,0 +1,139 @@
+{
+ "event": {
+  "category": "Sports",
+  "collateral_return_type": "MECNET",
+  "event_ticker": "KXNCAAFGAME-26NOV17MOHKENT",
+  "exchange_index": 0,
+  "last_updated_ts": "2026-11-04T02:06:57.509661Z",
+  "markets": [
+   {
+    "can_close_early": true,
+    "close_time": "2026-11-18T02:54:24Z",
+    "created_time": "2026-11-04T02:06:57.388213Z",
+    "custom_strike": {
+     "football_team": "be107279-93fe-4a83-b57a-3d2cb2e81737"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXNCAAFGAME-26NOV17MOHKENT",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-11-18T03:00:00Z",
+    "expiration_time": "2026-11-20T00:00:00Z",
+    "expiration_value": "Miami (OH)",
+    "last_price_dollars": "0.0100",
+    "latest_expiration_time": "2026-11-20T00:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "1.0000",
+    "no_bid_dollars": "0.0000",
+    "no_sub_title": "Kent St.",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-11-18T03:00:00Z",
+    "open_interest_fp": "776796.25",
+    "open_time": "2026-11-04T02:07:00Z",
+    "previous_price_dollars": "0.2500",
+    "previous_yes_ask_dollars": "0.2500",
+    "previous_yes_bid_dollars": "0.2400",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+     {
+      "end": "1.0000",
+      "start": "0.0000",
+      "step": "0.0100"
+     }
+    ],
+    "result": "no",
+    "rules_primary": "If Kent St. wins the Miami (OH) vs Kent St. college football game originally scheduled for Nov 17, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the game is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the game is cancelled or not started within 48 hours of its originally scheduled start, the market will resolve to a fair price.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 90,
+    "settlement_ts": "2026-11-18T02:56:54.592204Z",
+    "settlement_value_dollars": "0.0000",
+    "status": "finalized",
+    "strike_type": "structured",
+    "ticker": "KXNCAAFGAME-26NOV17MOHKENT-KENT",
+    "title": "Kent St. wins",
+    "updated_time": "2026-11-18T02:56:54.987119Z",
+    "volume_24h_fp": "1058854.96",
+    "volume_fp": "1064198.23",
+    "yes_ask_dollars": "1.0000",
+    "yes_ask_size_fp": "0.00",
+    "yes_bid_dollars": "0.0000",
+    "yes_bid_size_fp": "0.00",
+    "yes_sub_title": "Kent St."
+   },
+   {
+    "can_close_early": true,
+    "close_time": "2026-11-18T02:54:24Z",
+    "created_time": "2026-11-04T02:06:57.388213Z",
+    "custom_strike": {
+     "football_team": "8035af46-2259-433c-ae79-2f0f7d88e789"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXNCAAFGAME-26NOV17MOHKENT",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-11-18T03:00:00Z",
+    "expiration_time": "2026-11-20T00:00:00Z",
+    "expiration_value": "Miami (OH)",
+    "last_price_dollars": "0.9900",
+    "latest_expiration_time": "2026-11-20T00:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "1.0000",
+    "no_bid_dollars": "0.0000",
+    "no_sub_title": "Miami (OH)",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-11-18T03:00:00Z",
+    "open_interest_fp": "620988.97",
+    "open_time": "2026-11-04T02:07:00Z",
+    "previous_price_dollars": "0.7600",
+    "previous_yes_ask_dollars": "0.7600",
+    "previous_yes_bid_dollars": "0.7500",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+     {
+      "end": "1.0000",
+      "start": "0.0000",
+      "step": "0.0100"
+     }
+    ],
+    "result": "yes",
+    "rules_primary": "If Miami (OH) wins the Miami (OH) vs Kent St. college football game originally scheduled for Nov 17, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the game is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the game is cancelled or not started within 48 hours of its originally scheduled start, the market will resolve to a fair price.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 90,
+    "settlement_ts": "2026-11-18T02:56:54.592204Z",
+    "settlement_value_dollars": "1.0000",
+    "status": "finalized",
+    "strike_type": "structured",
+    "ticker": "KXNCAAFGAME-26NOV17MOHKENT-MOH",
+    "title": "Miami (OH) wins",
+    "updated_time": "2026-11-18T02:56:54.987119Z",
+    "volume_24h_fp": "894030.08",
+    "volume_fp": "905897.66",
+    "yes_ask_dollars": "1.0000",
+    "yes_ask_size_fp": "0.00",
+    "yes_bid_dollars": "0.0000",
+    "yes_bid_size_fp": "0.00",
+    "yes_sub_title": "Miami (OH)"
+   }
+  ],
+  "mutually_exclusive": true,
+  "product_metadata": {
+   "competition": "NCAA Football",
+   "competition_scope": "Game"
+  },
+  "series_ticker": "KXNCAAFGAME",
+  "settlement_sources": [
+   {
+    "name": "ESPN",
+    "url": "https://www.espn.com"
+   },
+   {
+    "name": "Kalshi using information originating from the NCAA",
+    "url": "https://www.ncaa.com/sports/football/fbs"
+   }
+  ],
+  "strike_period": "",
+  "sub_title": "MOH vs KENT (Nov 17)",
+  "title": "Miami (OH) vs Kent St."
+ },
+ "markets": []
+}

@@ -1,0 +1,290 @@
+[
+ {
+  "name": "kalshi_exchange_status",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/exchange/status",
+  "status": 200,
+  "bytes": 667
+ },
+ {
+  "kalshi_base": "https://api.elections.kalshi.com/trade-api/v2"
+ },
+ {
+  "name": "kalshi_cutoff",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/cutoff",
+  "status": 200,
+  "bytes": 188
+ },
+ {
+  "name": "kalshi_series_sports",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/series?category=Sports",
+  "status": 200,
+  "bytes": 6770866
+ },
+ {
+  "name": "kalshi_series_all",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/series",
+  "status": 200,
+  "bytes": 21082489
+ },
+ {
+  "name": "kalshi_markets_KXNBAGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXNBAGAME&status=settled&limit=6",
+  "status": 200,
+  "bytes": 13161
+ },
+ {
+  "name": "kalshi_hist_markets_KXNBAGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/markets?series_ticker=KXNBAGAME&limit=6",
+  "status": 200,
+  "bytes": 10296
+ },
+ {
+  "name": "kalshi_candles_KXNBAGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/candlesticks?tickers=KXNBAGAME-26NOV17PORMIN-POR%2CKXNBAGAME-26NOV17PORMIN-MIN&period_interval=60&start_ts=1789802212&end_ts=1794986212",
+  "status": 400,
+  "bytes": 66
+ },
+ {
+  "name": "kalshi_event_KXNBAGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events/KXNBAGAME-26NOV17PORMIN?with_nested_markets=true",
+  "status": 200,
+  "bytes": 4912
+ },
+ {
+  "name": "kalshi_markets_KXNFLGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXNFLGAME&status=settled&limit=6",
+  "status": 200,
+  "bytes": 14149
+ },
+ {
+  "name": "kalshi_hist_markets_KXNFLGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/markets?series_ticker=KXNFLGAME&limit=6",
+  "status": 200,
+  "bytes": 14187
+ },
+ {
+  "name": "kalshi_candles_KXNFLGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/candlesticks?tickers=KXNFLGAME-26NOV16LACBAL-LAC%2CKXNFLGAME-26NOV16LACBAL-BAL&period_interval=60&start_ts=1789802214&end_ts=1794986214",
+  "status": 400,
+  "bytes": 66
+ },
+ {
+  "name": "kalshi_event_KXNFLGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events/KXNFLGAME-26NOV16LACBAL?with_nested_markets=true",
+  "status": 200,
+  "bytes": 5213
+ },
+ {
+  "name": "kalshi_markets_KXMLBGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXMLBGAME&status=settled&limit=6",
+  "status": 200,
+  "bytes": 13755
+ },
+ {
+  "name": "kalshi_hist_markets_KXMLBGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/markets?series_ticker=KXMLBGAME&limit=6",
+  "status": 200,
+  "bytes": 13878
+ },
+ {
+  "name": "kalshi_candles_KXMLBGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/candlesticks?tickers=KXMLBGAME-26OCT282000MILTB-TB%2CKXMLBGAME-26OCT282000MILTB-MIL&period_interval=60&start_ts=1789802216&end_ts=1794986216",
+  "status": 400,
+  "bytes": 66
+ },
+ {
+  "name": "kalshi_event_KXMLBGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events/KXMLBGAME-26OCT282000MILTB?with_nested_markets=true",
+  "status": 200,
+  "bytes": 5243
+ },
+ {
+  "name": "kalshi_markets_KXNHLGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXNHLGAME&status=settled&limit=6",
+  "status": 200,
+  "bytes": 11727
+ },
+ {
+  "name": "kalshi_hist_markets_KXNHLGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/markets?series_ticker=KXNHLGAME&limit=6",
+  "status": 200,
+  "bytes": 10247
+ },
+ {
+  "name": "kalshi_candles_KXNHLGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/candlesticks?tickers=KXNHLGAME-26NOV17CGYSJ-SJ%2CKXNHLGAME-26NOV17CGYSJ-CGY&period_interval=60&start_ts=1789802218&end_ts=1794986218",
+  "status": 400,
+  "bytes": 66
+ },
+ {
+  "name": "kalshi_event_KXNHLGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events/KXNHLGAME-26NOV17CGYSJ?with_nested_markets=true",
+  "status": 200,
+  "bytes": 4396
+ },
+ {
+  "name": "kalshi_markets_KXNCAAFGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXNCAAFGAME&status=settled&limit=6",
+  "status": 200,
+  "bytes": 13182
+ },
+ {
+  "name": "kalshi_hist_markets_KXNCAAFGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/markets?series_ticker=KXNCAAFGAME&limit=6",
+  "status": 200,
+  "bytes": 13100
+ },
+ {
+  "name": "kalshi_candles_KXNCAAFGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/candlesticks?tickers=KXNCAAFGAME-26NOV17MOHKENT-MOH%2CKXNCAAFGAME-26NOV17MOHKENT-KENT&period_interval=60&start_ts=1789802220&end_ts=1794986220",
+  "status": 400,
+  "bytes": 66
+ },
+ {
+  "name": "kalshi_event_KXNCAAFGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events/KXNCAAFGAME-26NOV17MOHKENT?with_nested_markets=true",
+  "status": 200,
+  "bytes": 4948
+ },
+ {
+  "name": "kalshi_markets_KXFEDDECISION",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXFEDDECISION&status=settled&limit=6",
+  "status": 200,
+  "bytes": 11633
+ },
+ {
+  "name": "kalshi_hist_markets_KXFEDDECISION",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/markets?series_ticker=KXFEDDECISION&limit=6",
+  "status": 200,
+  "bytes": 12240
+ },
+ {
+  "name": "kalshi_candles_KXFEDDECISION",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/candlesticks?tickers=KXFEDDECISION-26OCT-H26%2CKXFEDDECISION-26OCT-H25&period_interval=60&start_ts=1789802223&end_ts=1794986223",
+  "status": 400,
+  "bytes": 66
+ },
+ {
+  "name": "kalshi_event_KXFEDDECISION",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events/KXFEDDECISION-26OCT?with_nested_markets=true",
+  "status": 200,
+  "bytes": 10064
+ },
+ {
+  "name": "kalshi_markets_KXEPLGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets?series_ticker=KXEPLGAME&status=settled&limit=6",
+  "status": 200,
+  "bytes": 14276
+ },
+ {
+  "name": "kalshi_hist_markets_KXEPLGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/markets?series_ticker=KXEPLGAME&limit=6",
+  "status": 200,
+  "bytes": 14248
+ },
+ {
+  "name": "kalshi_candles_KXEPLGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/candlesticks?tickers=KXEPLGAME-26NOV08BRIBRE-TIE%2CKXEPLGAME-26NOV08BRIBRE-BRI&period_interval=60&start_ts=1789802225&end_ts=1794986225",
+  "status": 400,
+  "bytes": 66
+ },
+ {
+  "name": "kalshi_event_KXEPLGAME",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events/KXEPLGAME-26NOV08BRIBRE?with_nested_markets=true",
+  "status": 200,
+  "bytes": 7596
+ },
+ {
+  "name": "kalshi_hist_markets_any",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/markets?limit=5",
+  "status": 200,
+  "bytes": 13630
+ },
+ {
+  "name": "kalshi_hist_candles",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/historical/markets/KXMVECROSSCATEGORY-S20266887F4BEA9B-9DBEDDC74D8/candlesticks?period_interval=60&start_ts=1735689600&end_ts=1794986226",
+  "status": 400,
+  "bytes": 145
+ },
+ {
+  "name": "kalshi_events_settled",
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?status=settled&limit=5&with_nested_markets=true",
+  "status": 200,
+  "bytes": 55861
+ },
+ {
+  "name": "poly_markets_keyset",
+  "url": "https://gamma-api.polymarket.com/markets/keyset?closed=true&limit=5",
+  "status": 200,
+  "bytes": 23923
+ },
+ {
+  "name": "poly_markets_list",
+  "url": "https://gamma-api.polymarket.com/markets?closed=true&limit=5&order=endDate&ascending=false",
+  "status": 200,
+  "bytes": 29687
+ },
+ {
+  "name": "poly_markets_list_offset",
+  "url": "https://gamma-api.polymarket.com/markets?closed=true&limit=5&offset=5000",
+  "status": 422,
+  "bytes": 98
+ },
+ {
+  "name": "poly_events_keyset",
+  "url": "https://gamma-api.polymarket.com/events/keyset?closed=true&limit=3",
+  "status": 200,
+  "bytes": 18077
+ },
+ {
+  "name": "poly_events_list",
+  "url": "https://gamma-api.polymarket.com/events?closed=true&limit=3&order=endDate&ascending=false",
+  "status": 200,
+  "bytes": 190612
+ },
+ {
+  "name": "poly_sports",
+  "url": "https://gamma-api.polymarket.com/sports",
+  "status": 200,
+  "bytes": 157510
+ },
+ {
+  "name": "poly_teams",
+  "url": "https://gamma-api.polymarket.com/teams?limit=60&league=nba",
+  "status": 200,
+  "bytes": 11048
+ },
+ {
+  "name": "poly_tags",
+  "url": "https://gamma-api.polymarket.com/tags?limit=300",
+  "status": 200,
+  "bytes": 15623
+ },
+ {
+  "name": "poly_search_fed",
+  "url": "https://gamma-api.polymarket.com/public-search?q=Fed+decision",
+  "status": 200,
+  "bytes": 133301
+ },
+ {
+  "name": "poly_search_nba",
+  "url": "https://gamma-api.polymarket.com/public-search?q=Lakers+vs",
+  "status": 200,
+  "bytes": 31876
+ },
+ {
+  "poly_sample_token": "104724011435282767010255443219369824983743637512947884356127488519927851482313"
+ },
+ {
+  "name": "poly_hist_dataapi_max",
+  "url": "https://data-api.polymarket.com/v2/prices-history?token_id=104724011435282767010255443219369824983743637512947884356127488519927851482313&interval=max&bucket_seconds=10800",
+  "status": 200,
+  "bytes": 5375
+ },
+ {
+  "name": "poly_hist_clob",
+  "url": "https://clob.polymarket.com/prices-history?market=104724011435282767010255443219369824983743637512947884356127488519927851482313&interval=max&fidelity=180",
+  "status": 200,
+  "bytes": 15
+ }
+]
