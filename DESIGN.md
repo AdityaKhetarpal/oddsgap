@@ -19,6 +19,8 @@ and the gap between them is a hatched band. The same three parts carry the logo,
   lines draw once. Both show the finding.
 - **Norman, it teaches itself:** a legend names both colours in words on every chart; arrow keys read any chart; the phone nav uses
   short labels so all four pages fit; a designed 404 lists every page.
+- **Mark (19 Nov 2026, Aditya's pick of three):** two overlapping circles, Kalshi orange and Polymarket blue; the shared area in ink is where
+  the prices agree, and the two slivers left showing are the gap. Used in the header, favicon and share image.
 - **Colour, validated:** Kalshi #e8542a / Polymarket #2f5bff (light) and #ea5a2f / #4f72ff (dark) pass the dataviz validator's colour-blind checks;
   text versions (#b23c17, #2446d6) pass 4.5:1 on white and on their tints.
 - **Motion (review-animations standards):** ticket entrance 760ms ease-out, once; line draw 1.6s ease-in-out, once; buttons press to 0.97 in 160ms;

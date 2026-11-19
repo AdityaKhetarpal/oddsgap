@@ -10,7 +10,7 @@ export default function OpenGraphImage() {
   const r = overview.results;
   const t = totals();
   const stats = [
-    [`${r.h1.value.toFixed(1)} pts`, "median gap per pair"],
+    [`${r.h1.value.toFixed(2)} pts`, "median gap per pair"],
     [r.pairs_tested.toLocaleString("en-US"), "identical questions tested"],
     [`${t.correct}/${t.reviewed}`, "matches correct on hand check"],
   ];
@@ -18,9 +18,10 @@ export default function OpenGraphImage() {
     (
       <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", background: "#0f1014", color: "#ffffff", padding: "70px 80px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <svg width="62" height="44" viewBox="0 0 28 20">
-            <rect x="0" y="0" width="11.5" height="20" rx="4" fill="#ea5a2f" />
-            <rect x="16.5" y="0" width="11.5" height="20" rx="4" fill="#4f72ff" />
+          <svg width="66" height="44" viewBox="0 0 30 20">
+            <circle cx="10" cy="10" r="9.5" fill="#ea5a2f" />
+            <circle cx="20" cy="10" r="9.5" fill="#4f72ff" />
+            <path d="M15 1.922 A9.5 9.5 0 0 1 15 18.078 A9.5 9.5 0 0 1 15 1.922 Z" fill="#ffffff" />
           </svg>
           <div style={{ fontSize: 32, fontWeight: 700 }}>OddsGap</div>
         </div>
