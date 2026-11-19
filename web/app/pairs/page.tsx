@@ -15,7 +15,7 @@ export default function Pairs() {
         <h1>Explore the pairs</h1>
         <p>
           Here are the {explorer.length} most-traded pairs. Each one is a question listed on both platforms. The two lines are Kalshi&apos;s and Polymarket&apos;s price for the same &ldquo;yes&rdquo;,
-          every 3 hours until 3 hours before the close. Where the shaded band is wide, the two markets disagreed.
+          every 3 hours until 3 hours before the close. Where the hatched band between them is wide, the two markets disagreed.
         </p>
       </div>
       <Explorer pairs={explorer} />

@@ -1,8 +1,8 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
 /**
- * Two price lines for one matched pair: Kalshi (teal) and Polymarket (violet), with the gap between them shaded.
+ * Two price lines for one matched pair: Kalshi (orange) and Polymarket (blue), with the gap between them hatched.
  * x = time, y = price as a probability. Hover or tap to read both prices. With `draw`, the lines draw themselves once.
  */
 export default function PairChart({ series, draw = false, height = 300 }: { series: [number, number, number][]; draw?: boolean; height?: number }) {
@@ -11,6 +11,7 @@ export default function PairChart({ series, draw = false, height = 300 }: { seri
   const pRef = useRef<SVGPathElement>(null);
   const [W, setW] = useState(640);
   const [hover, setHover] = useState<number | null>(null);
+  const hatch = `h${useId().replace(/:/g, "")}`;
 
   useEffect(() => {
     const el = box.current;
@@ -28,7 +29,7 @@ export default function PairChart({ series, draw = false, height = 300 }: { seri
     let killed = false;
     import("gsap").then(({ gsap }) => {
       if (killed) return;
-      gsap.to(paths, { strokeDashoffset: 0, duration: 2.2, ease: "power1.inOut", stagger: 0.12, onComplete: () => paths.forEach((p) => (p.style.strokeDasharray = "none")) });
+      gsap.to(paths, { strokeDashoffset: 0, duration: 1.6, ease: "power2.inOut", stagger: 0.1, onComplete: () => paths.forEach((p) => (p.style.strokeDasharray = "none")) });
     });
     const t = setTimeout(() => paths.forEach((p) => (p.style.strokeDashoffset = "0")), 3500);
     return () => { killed = true; clearTimeout(t); };
@@ -74,7 +75,7 @@ export default function PairChart({ series, draw = false, height = 300 }: { seri
       <div className="legend">
         <span><i className="lk" />Kalshi</span>
         <span><i className="lp" />Polymarket</span>
-        <span><i className="lg" />Gap between them (also shown below in points)</span>
+        <span><i className="lg" />The gap between them (also below, in points)</span>
       </div>
       <svg className="chart" width={W} height={TOTAL} viewBox={`0 0 ${W} ${TOTAL}`} role="img" aria-label="Kalshi and Polymarket prices for the same question over time. Use the left and right arrow keys to step through the readings."
         tabIndex={0}
@@ -88,6 +89,11 @@ export default function PairChart({ series, draw = false, height = 300 }: { seri
         onMouseMove={(e) => pick(e.clientX, e.currentTarget.getBoundingClientRect())} onMouseLeave={() => setHover(null)}
         onTouchStart={(e) => pick(e.touches[0].clientX, e.currentTarget.getBoundingClientRect())}
         onTouchMove={(e) => pick(e.touches[0].clientX, e.currentTarget.getBoundingClientRect())}>
+        <defs>
+          <pattern id={hatch} width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="var(--hatch)" strokeWidth="1.5" />
+          </pattern>
+        </defs>
         <g className="axis">
           {ticks.map((v) => (
             <g key={v}><line x1={L} x2={W - R} y1={y(v)} y2={y(v)} /><text x={L - 6} y={y(v) + 4} textAnchor="end">{Math.round(v * 100)}%</text></g>
@@ -96,26 +102,26 @@ export default function PairChart({ series, draw = false, height = 300 }: { seri
         {xt.map((t, i) => (
           <text key={i} x={x(t)} y={H - 6} textAnchor={i === 0 ? "start" : i === 2 ? "end" : "middle"}>{days > 3 ? fmtDay(t) : fmtTime(t).replace(" UTC", "")}</text>
         ))}
-        <path d={band} fill="var(--gap)" />
-        <path ref={kRef} d={line(1)} fill="none" stroke="var(--kalshi)" strokeWidth={2.2} strokeLinejoin="round" />
-        <path ref={pRef} d={line(2)} fill="none" stroke="var(--poly)" strokeWidth={2.2} strokeLinejoin="round" />
+        <path d={band} fill={`url(#${hatch})`} />
+        <path ref={kRef} d={line(1)} fill="none" stroke="var(--kalshi)" strokeWidth={2} strokeLinejoin="round" strokeLinecap="round" />
+        <path ref={pRef} d={line(2)} fill="none" stroke="var(--poly)" strokeWidth={2} strokeLinejoin="round" strokeLinecap="round" />
         <text x={L} y={g0 - 5}>Gap, points</text>
         <line x1={L} x2={W - R} y1={gy(0)} y2={gy(0)} stroke="var(--line)" />
         <text x={L - 6} y={gy(gmax) + 4} textAnchor="end">{gmax}</text>
         <text x={L - 6} y={gy(0) + 4} textAnchor="end">0</text>
-        <path d={gapArea} fill="var(--muted)" opacity={0.45} />
+        <path d={gapArea} fill={`url(#${hatch})`} stroke="var(--line-2)" strokeWidth={1} />
         {h && (
           <g>
-            <line x1={x(h[0])} x2={x(h[0])} y1={T} y2={g0 + GH} stroke="var(--muted)" strokeDasharray="3 3" />
-            <circle cx={x(h[0])} cy={y(h[1])} r={4} fill="var(--kalshi)" />
-            <circle cx={x(h[0])} cy={y(h[2])} r={4} fill="var(--poly)" />
+            <line x1={x(h[0])} x2={x(h[0])} y1={T} y2={g0 + GH} stroke="var(--faint)" strokeDasharray="2 3" />
+            <circle cx={x(h[0])} cy={y(h[1])} r={4.5} fill="var(--kalshi)" stroke="var(--card)" strokeWidth={2} />
+            <circle cx={x(h[0])} cy={y(h[2])} r={4.5} fill="var(--poly)" stroke="var(--card)" strokeWidth={2} />
           </g>
         )}
       </svg>
       <div className="readout" aria-live="polite">
         {h ? (
-          <><b>{fmtTime(h[0])}</b>: <span className="k">Kalshi {(h[1] * 100).toFixed(1)}%</span>, <span className="p">Polymarket {(h[2] * 100).toFixed(1)}%</span>, gap <b>{(Math.abs(h[1] - h[2]) * 100).toFixed(1)} pts</b></>
-        ) : "Hover, tap, or focus the chart and use the arrow keys to read both prices at a moment in time."}
+          <><b>{fmtTime(h[0])}</b> · <span className="k">Kalshi {(h[1] * 100).toFixed(1)}%</span> · <span className="p">Polymarket {(h[2] * 100).toFixed(1)}%</span> · gap <b>{(Math.abs(h[1] - h[2]) * 100).toFixed(1)} pts</b></>
+        ) : "Hover, tap or use the arrow keys to read both prices at any moment."}
       </div>
     </div>
   );

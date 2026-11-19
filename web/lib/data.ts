@@ -44,3 +44,19 @@ export const totals = () => {
   return { matched: sum("matched"), liquid: sum("liquid"), sampled: sum("sampled"), tested: sum("tested"),
            reviewed: sum("reviewed"), correct: sum("review_correct"), different: sum("settled_differently") };
 };
+
+// One real moment of a pair, for the split ticket: the comparable point whose gap is closest to the pair's own median gap
+// (ties go to the point nearest the middle of the series), so the ticket shows a typical moment, not a cherry-picked one.
+export const moment = (pair: Pair) => {
+  const s = pair.series, mid = (s.length - 1) / 2;
+  let best = s[0], score = Infinity;
+  s.forEach((pt, i) => {
+    const g = Math.abs(pt[1] - pt[2]) * 100;
+    if (g === 0) return;
+    const sc = Math.abs(g - pair.gap_pp) * 1000 + Math.abs(i - mid);
+    if (sc < score) { score = sc; best = pt; }
+  });
+  return { t: best[0], k: best[1] * 100, p: best[2] * 100, gap: Math.abs(best[1] - best[2]) * 100 };
+};
+export const timeName = (t: number) =>
+  new Date(t * 1000).toLocaleString("en-US", { day: "numeric", month: "short", year: "numeric", hour: "numeric", timeZone: "UTC" }) + " UTC";

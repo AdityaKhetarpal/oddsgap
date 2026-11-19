@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource-variable/archivo/wdth.css";
-import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource-variable/bricolage-grotesque/standard.css";
+import "@fontsource-variable/hanken-grotesk";
+import "@fontsource-variable/martian-mono";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Motion from "@/components/Motion";
+import NextPage from "@/components/NextPage";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const SITE = "https://odds-gap.vercel.app";
@@ -20,26 +22,27 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [{ media: "(prefers-color-scheme: light)", color: "#ffffff" }, { media: "(prefers-color-scheme: dark)", color: "#0b0d11" }],
+  themeColor: [{ media: "(prefers-color-scheme: light)", color: "#ffffff" }, { media: "(prefers-color-scheme: dark)", color: "#0f1014" }],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
-      </head>
       <body>
+        <a className="skip" href="#main">Skip to content</a>
         <Nav />
-        <main>{children}</main>
+        <main id="main" tabIndex={-1}>{children}</main>
+        <NextPage />
         <footer>
           <div className="wrap">
-            <span>Data: Kalshi and Polymarket public market-data APIs (no keys). Markets that closed 1 Jan 2025 to 31 Oct 2026.</span>
-            <span>Descriptive research only: not trading advice and not a trading signal. Not affiliated with Kalshi or Polymarket.</span>
-            <span>
-              <a href="https://github.com/AdityaKhetarpal/oddsgap">Notebooks and data on GitHub</a>. Built by{" "}
-              <a href="https://www.linkedin.com/in/adityakhetarpal">Aditya Khetarpal</a>
-            </span>
+            <div>
+              <p>Data: Kalshi and Polymarket public market-data APIs (no keys). Markets that closed 1 Jan 2025 to 31 Oct 2026.</p>
+              <p>Descriptive research only: not trading advice and not a trading signal. Not affiliated with Kalshi or Polymarket.</p>
+            </div>
+            <div className="links">
+              <a href="https://github.com/AdityaKhetarpal/oddsgap">Notebooks and data on GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/adityakhetarpal">Built by Aditya Khetarpal ↗</a>
+            </div>
           </div>
         </footer>
         <Motion />

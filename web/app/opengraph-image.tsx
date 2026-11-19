@@ -16,24 +16,23 @@ export default function OpenGraphImage() {
   ];
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", background: "#0b0d11", color: "#ffffff", padding: "70px 80px" }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", background: "#0f1014", color: "#ffffff", padding: "70px 80px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <svg width="52" height="52" viewBox="0 0 32 32">
-            <rect x="1.5" y="1.5" width="29" height="29" rx="4" fill="none" stroke="#ffffff" strokeWidth="2" />
-            <path d="M6 10 C13 11 18 16 26 16" fill="none" stroke="#3cc8c1" strokeWidth="2.4" strokeLinecap="round" />
-            <path d="M6 22 C13 21 18 16 26 16" fill="none" stroke="#a78bfa" strokeWidth="2.4" strokeLinecap="round" />
+          <svg width="62" height="44" viewBox="0 0 28 20">
+            <rect x="0" y="0" width="11.5" height="20" rx="4" fill="#ea5a2f" />
+            <rect x="16.5" y="0" width="11.5" height="20" rx="4" fill="#4f72ff" />
           </svg>
           <div style={{ fontSize: 32, fontWeight: 700 }}>OddsGap</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           <div style={{ fontSize: 66, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2 }}>Same event, two prices.</div>
-          <div style={{ fontSize: 28, color: "#9aa3b0" }}>How far apart Kalshi and Polymarket price identical questions, and which one was right</div>
+          <div style={{ fontSize: 28, color: "#9ba1ac" }}>How far apart Kalshi and Polymarket price identical questions, and which one was right</div>
         </div>
         <div style={{ display: "flex", gap: 60 }}>
           {stats.map(([v, l]) => (
             <div key={l} style={{ display: "flex", flexDirection: "column" }}>
-              <div style={{ fontSize: 42, fontWeight: 700, color: "#a78bfa" }}>{v}</div>
-              <div style={{ fontSize: 20, color: "#9aa3b0" }}>{l}</div>
+              <div style={{ fontSize: 42, fontWeight: 700, color: "#ffffff" }}>{v}</div>
+              <div style={{ fontSize: 20, color: "#9ba1ac" }}>{l}</div>
             </div>
           ))}
         </div>

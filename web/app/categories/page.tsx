@@ -24,12 +24,12 @@ export default function Categories() {
       </div>
 
       <section className="card">
-        <h2>Share of pairs that differed by 2 points or more</h2>
-        <Bars rows={rows.map((c) => ({ label: CATEGORY_NAME[c.category], value: c.share_over_2pp }))} unit="%" label="Share of pairs with a median gap of 2 points or more, by category" />
+        <h3>Share of pairs that differed by 2 points or more</h3>
+        <Bars rows={rows.map((c) => ({ label: CATEGORY_NAME[c.category], value: c.share_over_2pp }))} unit="%" highlight={CATEGORY_NAME[most.category]} label="Share of pairs with a median gap of 2 points or more, by category" />
         <p className="source">Source: Kalshi and Polymarket public APIs, Jan 2025 to Oct 2026. Each pair counts once.</p>
       </section>
 
-      <section className="section">
+      <section className="section" style={{ paddingTop: 56 }}>
         <h2>The numbers</h2>
         <p className="sub">
           &ldquo;Kalshi higher&rdquo; is the median signed difference: above zero means Kalshi priced &ldquo;yes&rdquo; higher than Polymarket.

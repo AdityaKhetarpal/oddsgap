@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { overview, totals, num, CATEGORY_NAME } from "@/lib/data";
+import { overview, totals, num, dateName, CATEGORY_NAME } from "@/lib/data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/method" },
@@ -18,7 +18,7 @@ export default function Method() {
       <div className="head">
         <h1>How we tested it</h1>
         <p>
-          The questions, the definitions and the rule for each verdict were written down and locked on {r.pre_registered}, before any market data was downloaded.
+          The questions, the definitions and the rule for each verdict were written down and locked on {dateName(r.pre_registered)}, before any market data was downloaded.
           Every step can be rerun from the <a href={GH}>notebooks on GitHub</a>.
         </p>
       </div>
@@ -59,7 +59,7 @@ export default function Method() {
         <h2>3. The three locked tests</h2>
         <ul>
           <li><b>H1, the gap is at least 2 points:</b> {r.h1.verdict}. Median {r.h1.value.toFixed(2)} pts, 90% range {r.h1.low.toFixed(2)} to {r.h1.high.toFixed(2)}, {num(r.h1.n)} pairs.</li>
-          <li><b>H2, gaps narrow in the last 24 hours compared with 3+ days out:</b> {r.h2.verdict}. from {r.h2.far_median.toFixed(2)} to {r.h2.near_median.toFixed(2)} pts;
+          <li><b>H2, gaps narrow in the last 24 hours compared with 3+ days out:</b> {r.h2.verdict}. From {r.h2.far_median.toFixed(2)} to {r.h2.near_median.toFixed(2)} pts;
             change {r.h2.value.toFixed(2)}, 90% range {r.h2.low.toFixed(2)} to {r.h2.high.toFixed(2)}, {num(r.h2.n)} pairs.</li>
           <li><b>H3, equal accuracy a day before the close (Brier score):</b> {r.h3.verdict}. Kalshi {r.h3.brier_kalshi.toFixed(4)}, Polymarket {r.h3.brier_polymarket.toFixed(4)};
             difference {r.h3.value.toFixed(4)}, 90% range {r.h3.low.toFixed(4)} to {r.h3.high.toFixed(4)}, {num(r.h3.n)} pairs.</li>
@@ -78,7 +78,7 @@ export default function Method() {
                 <thead><tr><th>Date</th><th>Kalshi market</th><th>Polymarket event</th><th className="num">Kalshi</th><th className="num">Polymarket</th></tr></thead>
                 <tbody>
                   {r.mismatches.map((m) => (
-                    <tr key={m.kalshi_ticker}><td>{m.date}</td><td><code>{m.kalshi_ticker}</code></td><td><code>{m.poly_slug}</code></td>
+                    <tr key={m.kalshi_ticker}><td style={{ whiteSpace: "nowrap" }}>{dateName(m.date)}</td><td><code>{m.kalshi_ticker}</code></td><td><code>{m.poly_slug}</code></td>
                       <td className="num bad">{m.kalshi_result ? "yes" : "no"}</td><td className="num bad">{m.poly_result ? "yes" : "no"}</td></tr>
                   ))}
                 </tbody>

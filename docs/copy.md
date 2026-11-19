@@ -1,4 +1,4 @@
-# UX copy: OddsGap (ux-copy pass, 18 Nov 2026)
+# UX copy: OddsGap (ux-copy pass, 18 Nov 2026; revised 19 Nov 2026 with the "Split" redesign)
 
 Readers: a recruiter at a fintech or trading firm with 30 seconds, and a trader who wants exact numbers.
 Voice: a careful analyst. Exact numbers, plain words, no hype, no trading advice.
@@ -7,7 +7,7 @@ Voice: a careful analyst. Exact numbers, plain words, no hype, no trading advice
 - **Pair:** one question listed on both platforms. Never "arb", "opportunity" or "edge".
 - **Gap:** the difference between the two prices, in **points** (percentage points). Explained on first use:
   "52% on one and 49% on the other is a 3-point gap".
-- **Kalshi** is always teal and **Polymarket** always violet: in text labels, lines and tables.
+- **Kalshi** is always orange and on the left; **Polymarket** is always blue and on the right: in text labels, lines, tickets and tables.
 - **Locked test:** the tests fixed before any data was downloaded. "Pre-registered" appears only on the Method page.
 - **Reported, not tested:** the label for findings outside the three locked tests.
 - **Settled differently:** a pair that resolved one way on Kalshi and the other way on Polymarket.
@@ -15,10 +15,15 @@ Voice: a careful analyst. Exact numbers, plain words, no hype, no trading advice
 ## Recommended copy
 - **Opening line:** "Same question, {nearly the same | different} odds: a typical gap of X points." The wording follows the H1 verdict,
   computed from the data, so the headline can never claim more than the test found.
-- **Sub-line:** says what was matched, the window, the 3-hour sampling, and a worked example of what X points means.
+- **Sub-line:** says what was matched, the window and the 3-hour sampling, in about 35 words.
+- **Split ticket:** a real moment from the featured pair (the point whose gap is closest to the pair's median), with its time and how many days before the game it was. The caption explains points on first use with those real prices, never an invented example.
 - **Verdict cards:** a plain answer first ("Yes." / "No: the gap is smaller." / "Too close to call."), then the numbers and the 90% range.
-- **Chart hint:** "Hover or tap the chart to read both prices at a moment in time."
+- **Chart hint:** "Hover, tap or use the arrow keys to read both prices at any moment."
 - **Primary action:** "Explore the pairs". **Secondary:** "How we tested it".
+- **Nav on phones:** "Answer", "Pairs", "Categories", "Method" (the full labels don't fit a 390px screen).
+- **Next-page link:** "Next: page N of 4", the page name, and the question that page answers.
+- **404:** "No market lists this page." followed by the four pages and their questions.
+- **Pair picker options:** date · question (cut at 46 characters) · gap in points.
 - **Footer:** "Descriptive research only: not trading advice and not a trading signal. Not affiliated with Kalshi or Polymarket."
 
 ## Rationale

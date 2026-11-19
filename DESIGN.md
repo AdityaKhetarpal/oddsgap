@@ -1,7 +1,30 @@
-# OddsGap: design decisions (design council, 18 Nov 2026)
+# OddsGap: design decisions
 
 One question: **when Kalshi and Polymarket price the same yes/no question, how far apart are they?**
 Readers: recruiters at fintech and trading firms (30 seconds), and traders who want the numbers (a few minutes).
+
+## Current design: "The Split" (19 Nov 2026, redesigned from scratch)
+Decided by Aditya: a new design from scratch, checked with the design-critique, design-council, ux-copy and review-animations skills.
+
+**Idea.** Every result is one question split into two prices. Kalshi is the left half (orange), Polymarket the right half (blue),
+and the gap between them is a hatched band. The same three parts carry the logo, the hero ticket, the chart band, the funnel and the accuracy scores.
+
+- **Ive, material:** a split ticket. Two tinted halves with 14px outer corners, a hatched seam, display figures for the prices.
+  Type: Bricolage Grotesque (narrowed, for headlines and big prices), Hanken Grotesk (reading), Martian Mono (numbers in tables and readouts).
+- **Rams, restraint:** three type steps (display, title, body). Colour means something only: orange = Kalshi, blue = Polymarket,
+  hatch = the gap, red = settled differently. Sentence case everywhere; no logos of either platform.
+- **Hadid, flow:** hero (verdict and a real moment as a ticket) → one real pair, full width → the funnel (gap by time left, furthest first,
+  centred on the seam so it narrows toward the close) → five questions on a results board → a dark closing statement. Inner pages end with a next-page link.
+- **Ingels, delight that does a job:** on first load the two halves of the ticket slide together until only the gap is left; the pair chart's
+  lines draw once. Both show the finding.
+- **Norman, it teaches itself:** a legend names both colours in words on every chart; arrow keys read any chart; the phone nav uses
+  short labels so all four pages fit; a designed 404 lists every page.
+- **Colour, validated:** Kalshi #e8542a / Polymarket #2f5bff (light) and #ea5a2f / #4f72ff (dark) pass the dataviz validator's colour-blind checks;
+  text versions (#b23c17, #2446d6) pass 4.5:1 on white and on their tints.
+- **Motion (review-animations standards):** ticket entrance 760ms ease-out, once; line draw 1.6s ease-in-out, once; buttons press to 0.97 in 160ms;
+  hover only with a real pointer; Vanta (faint net) paused off screen and off on phones; reduced motion keeps short fades only.
+
+## Earlier design (18 Nov 2026, replaced)
 
 ## Hadid: movement through space
 - **The opening screen is the answer.** The verdict is the headline itself ("a typical gap of 0.75 points"), set extra-wide.
@@ -59,5 +82,6 @@ accessibility-review, portfolio-audit and portfolio-story skills. What changed a
 - Not changed: Kalshi teal and Polymarket violet, the mark, the data and every verdict.
 
 ## Change log
+- 2026-11-19: "The Split", a new design from scratch (above). Teal/violet, Archivo and IBM Plex Mono replaced.
 - 2026-11-18: revision above.
 - 2026-11-18: first design (design council).
