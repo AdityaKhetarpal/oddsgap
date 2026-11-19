@@ -10,7 +10,8 @@ Decided by Aditya: a new design from scratch, checked with the design-critique, 
 and the gap between them is a hatched band. The same three parts carry the logo, the hero ticket, the chart band, the funnel and the accuracy scores.
 
 - **Ive, material:** a split ticket. Two tinted halves with 14px outer corners, a hatched seam, display figures for the prices.
-  Type: Bricolage Grotesque (narrowed, for headlines and big prices), Hanken Grotesk (reading), Martian Mono (numbers in tables and readouts).
+  Type (19 Nov 2026, from the taste skill's font deal for a fintech/software page, its first pick): Host Grotesk for headlines, prices
+  and reading, JetBrains Mono for numbers in tables and readouts. Headlines at weight 500 with -4% tracking, text 400, buttons and labels 500.
 - **Rams, restraint:** three type steps (display, title, body). Colour means something only: orange = Kalshi, blue = Polymarket,
   hatch = the gap, red = settled differently. Sentence case everywhere; no logos of either platform.
 - **Hadid, flow:** hero (verdict and a real moment as a ticket) → one real pair, full width → the funnel (gap by time left, furthest first,
@@ -84,6 +85,7 @@ accessibility-review, portfolio-audit and portfolio-story skills. What changed a
 - Not changed: Kalshi teal and Polymarket violet, the mark, the data and every verdict.
 
 ## Change log
+- 2026-11-19: fonts changed to Host Grotesk + JetBrains Mono (taste skill), replacing Bricolage Grotesque, Hanken Grotesk and Martian Mono.
 - 2026-11-19: "The Split", a new design from scratch (above). Teal/violet, Archivo and IBM Plex Mono replaced.
 - 2026-11-18: revision above.
 - 2026-11-18: first design (design council).

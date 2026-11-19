@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource-variable/bricolage-grotesque/standard.css";
-import "@fontsource-variable/hanken-grotesk";
-import "@fontsource-variable/martian-mono";
+import "@fontsource-variable/host-grotesk";
+import "@fontsource-variable/jetbrains-mono";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Motion from "@/components/Motion";
