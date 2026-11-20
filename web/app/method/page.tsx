@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { overview, totals, num, dateName, CATEGORY_NAME } from "@/lib/data";
+import { overview, totals, num, dateName, CATEGORY_NAME, snapshot, TOOLS } from "@/lib/data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/method" },
-  title: "How we tested it",
+  title: "How I tested it",
   description: "The pre-registered test behind OddsGap: how questions were matched across Kalshi and Polymarket, how prices were lined up, the three hypotheses and their verdicts, and the limits.",
 };
 
@@ -16,11 +16,15 @@ export default function Method() {
   return (
     <div className="wrap">
       <div className="head">
-        <h1>How we tested it</h1>
+        <h1>How I tested it</h1>
         <p>
           The questions, the definitions and the rule for each verdict were written down and locked on {dateName(r.pre_registered)}, before any market data was downloaded.
           Every step can be rerun from the <a href={GH}>notebooks on GitHub</a>.
         </p>
+        <ul className="facts">
+          <li>{snapshot(r.pre_registered)}</li>
+          <li>{TOOLS}</li>
+        </ul>
       </div>
       <div className="prose">
         <h2>1. Matching identical questions</h2>
@@ -71,7 +75,7 @@ export default function Method() {
           <>
             <p>
               {r.mismatches.length} pairs settled one way on Kalshi and the other way on Polymarket. Their dates and close times point to rescheduled or relabelled
-              games rather than a real dispute, but we list them rather than drop them. They are left out of the accuracy test.
+              games rather than a real dispute, but I list them rather than drop them. They are left out of the accuracy test.
             </p>
             <div className="table-wrap" tabIndex={0} role="region" aria-label="Data table">
               <table>
@@ -97,11 +101,11 @@ export default function Method() {
         <h2>Limits</h2>
         <ul>
           <li><b>3-hour steps.</b> Fast moves inside a step are invisible, so &ldquo;who moves first&rdquo; is a rough reading.</li>
-          <li><b>Time stamps, checked.</b> We treat Polymarket&apos;s 3-hour timestamps as the time of the price. Shifting its series one or two steps either way only widened the average gap
+          <li><b>Time stamps, checked.</b> I treat Polymarket&apos;s 3-hour timestamps as the time of the price. Shifting its series one or two steps either way only widened the average gap
             (best fit: {r.alignment.best_shift === 0 ? "no shift" : `${r.alignment.best_shift} steps`}; {r.alignment.table.map((s) => `${s.shift_steps > 0 ? "+" : ""}${s.shift_steps}: ${s.mean_gap_pp.toFixed(2)}`).join(", ")} pts), so the two series line up as assumed.</li>
           <li><b>Price steps.</b> Both platforms quote in half-cent or cent steps, so medians land on round values (0.5, 0.75, 1.0). The average gap per pair (median {r.detail.mean_gap_per_pair_median.toFixed(2)} pts) is reported alongside.</li>
           <li><b>Two different crowds.</b> Kalshi is a US-regulated exchange (US users, dollar accounts); Polymarket runs on crypto rails. Fees and the cost of moving money
-            between them are reasons small gaps can last. We don&apos;t measure them.</li>
+            between them are reasons small gaps can last. I don&apos;t measure them.</li>
           <li><b>Mostly sports.</b> Games dominate the sample; only {r.by_category.find((c) => c.category === "Fed")?.pairs ?? 0} Fed outcomes were tested.</li>
           <li>Descriptive research only. Not trading advice; real-money prediction trading isn&apos;t allowed everywhere, including India.</li>
         </ul>

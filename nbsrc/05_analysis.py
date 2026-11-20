@@ -124,7 +124,7 @@ detail
 # %% [markdown]
 # ### Check: are the two series lined up in time?
 # The plan flagged a risk: Polymarket's 3-hour timestamps might mark the start of each step, not the end. If so, shifting its
-# series by one step would bring the two prices closer. We try shifts of −2 to +2 steps and keep the result.
+# series by one step would bring the two prices closer. I try shifts of −2 to +2 steps and keep the result.
 
 # %%
 prices = pd.read_parquet(OUT / "prices.parquet")

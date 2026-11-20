@@ -1,7 +1,9 @@
 # OddsGap: design decisions
 
 One question: **when Kalshi and Polymarket price the same yes/no question, how far apart are they?**
-Readers: recruiters at fintech and trading firms (30 seconds), and traders who want the numbers (a few minutes).
+Readers: recruiters and hiring managers at fintech, trading and data firms first (30 seconds), traders who want the numbers second (a few minutes).
+What it proves: the work of a fintech data/research analyst, with tests locked before any data was downloaded.
+The data is a fixed snapshot (Jan 2025 to Oct 2026), never refreshed, so the locked tests stay honest. Link: odds-gap.vercel.app.
 
 ## Current design: "The Split" (19 Nov 2026, redesigned from scratch)
 Decided by Aditya: a new design from scratch, checked with the design-critique, design-council, ux-copy and review-animations skills.
@@ -55,7 +57,7 @@ and the gap between them is a hatched band. The same three parts carry the logo,
   - **Kalshi is one fixed colour (teal) and Polymarket another (violet)**, everywhere: lines, labels and tables. No other hues.
   - Grey marks the gap between the two lines.
   - Red is used only for pairs that settled differently.
-- No logos of either platform (we don't imply endorsement), no badges, no gradient blobs.
+- No logos of either platform (no endorsement implied), no badges, no gradient blobs.
 
 ## Ingels: delight that does a job
 - **The closing gap.** On load, the two opening lines draw from left to right and meet at the settle point. The shaded gap
@@ -85,6 +87,7 @@ accessibility-review, portfolio-audit and portfolio-story skills. What changed a
 - Not changed: Kalshi teal and Polymarket violet, the mark, the data and every verdict.
 
 ## Change log
+- 2026-11-20: decided in a grilling session: recruiters first; "I" voice on the site and in the notebooks; byline under the hero; close links to the portfolio; snapshot and tools lines; name on the share image.
 - 2026-11-19: fonts changed to Host Grotesk + JetBrains Mono (taste skill), replacing Bricolage Grotesque, Hanken Grotesk and Martian Mono.
 - 2026-11-19: "The Split", a new design from scratch (above). Teal/violet, Archivo and IBM Plex Mono replaced.
 - 2026-11-18: revision above.

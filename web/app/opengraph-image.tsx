@@ -24,6 +24,7 @@ export default function OpenGraphImage() {
             <path d="M15 1.922 A9.5 9.5 0 0 1 15 18.078 A9.5 9.5 0 0 1 15 1.922 Z" fill="#ffffff" />
           </svg>
           <div style={{ fontSize: 32, fontWeight: 700 }}>OddsGap</div>
+          <div style={{ fontSize: 24, color: "#9ba1ac", marginLeft: 8 }}>by Aditya Khetarpal</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           <div style={{ fontSize: 66, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2 }}>Same event, two prices.</div>

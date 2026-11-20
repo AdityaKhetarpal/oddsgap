@@ -40,7 +40,7 @@ kg[["ticker", "league", "date", "code", "teams", "result", "volume"]].head()
 # %% [markdown]
 # ### Polymarket games: date and team codes from the slug
 # Slug `nba-phx-lal-2025-10-03` gives the league, the two team codes (in the same order as the outcomes) and the date.
-# A doubleheader ends in `-2`, which we keep as part of the game id.
+# A doubleheader ends in `-2`, which I keep as part of the game id.
 
 # %%
 data = pd.read_parquet(RAW / "poly_markets.parquet")
@@ -59,7 +59,7 @@ pg[["event_slug", "league", "date", "code_a", "code_b", "outcomes_l", "volume"]]
 # %% [markdown]
 # ### Do the team codes agree?
 # Most codes are the same on both platforms. Where one platform uses a different code for the same team, it shows up as a
-# game on the same day with one code in common and one code different. We count those and keep an alias only if it appears
+# game on the same day with one code in common and one code different. I count those and keep an alias only if it appears
 # at least 3 times, always the same way.
 
 # %%
@@ -172,7 +172,7 @@ pairs["settled_differently"] = pairs["poly_result"].notna() & (pairs["kalshi_res
 pairs.groupby("category").agg(pairs=("pair_id", "size"), liquid=("liquid", "sum"), settled_differently=("settled_differently", "sum"))
 
 # %% [markdown]
-# ### Choose the pairs whose prices we download
+# ### Choose the pairs whose prices I download
 # Downloading every game's history would take many hours, so prices are fetched for **all liquid Fed pairs** and a
 # **random 600 liquid games per league** (seed 42). The sample is drawn before any price is seen.
 

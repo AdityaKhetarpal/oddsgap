@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Vanta from "@/components/Vanta";
 import PairChart from "@/components/PairChart";
-import { overview, curve, totals, num, pp, dateName, timeName, moment, CATEGORY_NAME } from "@/lib/data";
+import { overview, curve, totals, num, pp, dateName, timeName, moment, CATEGORY_NAME, PORTFOLIO, TOOLS } from "@/lib/data";
 
 const LD = {"@context": "https://schema.org", "@type": "Dataset", "name": "OddsGap: Kalshi vs Polymarket prices on identical questions", "description": "7,556 yes/no questions listed on both Kalshi and Polymarket (NBA, NFL, MLB and NHL games, Fed rate decisions), with both prices every 3 hours and a pre-registered test of the gap between them, January 2025 to October 2026.", "url": "https://odds-gap.vercel.app", "temporalCoverage": "2025-01/2026-10", "keywords": ["prediction markets", "Kalshi", "Polymarket", "market microstructure", "calibration"], "isBasedOn": ["https://kalshi.com", "https://polymarket.com"], "sameAs": "https://github.com/AdityaKhetarpal/oddsgap", "creator": {"@type": "Person", "name": "Aditya Khetarpal", "url": "https://www.linkedin.com/in/adityakhetarpal"}};
 
@@ -38,8 +38,9 @@ export default function Home() {
           </p>
           <div className="actions">
             <Link className="btn" href="/pairs">Explore the pairs</Link>
-            <Link className="btn ghost" href="/method">How we tested it</Link>
+            <Link className="btn ghost" href="/method">How I tested it</Link>
           </div>
+          <p className="byline">A research project by <a href={PORTFOLIO}>Aditya Khetarpal</a></p>
 
           <div className="ticket" role="group" aria-label={`One real moment: Kalshi ${p1(m.k)}%, Polymarket ${p1(m.p)}%, a ${p1(m.gap)}-point gap`}>
             <div className="half k">
@@ -183,12 +184,13 @@ export default function Home() {
           <h2>The two biggest prediction markets price the same question {gap < 1.25 ? "within about a point" : gap < 2 ? "within two points" : "close, but not identically"}.</h2>
           <p>
             Fees, different users (US accounts on Kalshi, crypto wallets on Polymarket) and the cost of moving money between them are reasons small gaps can last;
-            we don&apos;t measure those here. This describes the past. It isn&apos;t a trading signal.
+            I don&apos;t measure those here. This describes the past. It isn&apos;t a trading signal.
           </p>
           <div className="actions">
             <Link className="btn" href="/pairs">Explore the pairs</Link>
-            <Link className="btn ghost" href="/categories">See the gaps by category</Link>
+            <a className="btn ghost" href={PORTFOLIO}>See my other projects</a>
           </div>
+          <p className="tools">{TOOLS}</p>
         </div>
       </section>
     </>

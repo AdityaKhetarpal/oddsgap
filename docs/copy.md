@@ -1,7 +1,7 @@
 # UX copy: OddsGap (ux-copy pass, 18 Nov 2026; revised 19 Nov 2026 with the "Split" redesign)
 
 Readers: a recruiter at a fintech or trading firm with 30 seconds, and a trader who wants exact numbers.
-Voice: a careful analyst. Exact numbers, plain words, no hype, no trading advice.
+Voice: a careful analyst, in the first person ("I", never "we": it is one person's work). Exact numbers, plain words, no hype, no trading advice.
 
 ## Terms (always the same words)
 - **Pair:** one question listed on both platforms. Never "arb", "opportunity" or "edge".
@@ -19,7 +19,10 @@ Voice: a careful analyst. Exact numbers, plain words, no hype, no trading advice
 - **Split ticket:** a real moment from the featured pair (the point whose gap is closest to the pair's median), with its time and how many days before the game it was. The caption explains points on first use with those real prices, never an invented example.
 - **Verdict cards:** a plain answer first ("Yes." / "No: the gap is smaller." / "Too close to call."), then the numbers and the 90% range.
 - **Chart hint:** "Hover, tap or use the arrow keys to read both prices at any moment."
-- **Primary action:** "Explore the pairs". **Secondary:** "How we tested it".
+- **Primary action:** "Explore the pairs". **Secondary:** "How I tested it".
+- **Byline under the hero buttons:** "A research project by Aditya Khetarpal", linking to the portfolio.
+- **Closing section:** "Explore the pairs" and "See my other projects" (the portfolio), then the tools line: "Built with Python (pandas), DuckDB SQL, GitHub Actions, and Next.js on Vercel."
+- **Snapshot line (footer and method page):** "A fixed snapshot: markets that closed 1 Jan 2025 to 31 Oct 2026. Tests locked 18 Nov 2026. Not updated."
 - **Nav on phones:** "Answer", "Pairs", "Categories", "Method" (the full labels don't fit a 390px screen).
 - **Next-page link:** "Next: page N of 4", the page name, and the question that page answers.
 - **404:** "No market lists this page." followed by the four pages and their questions.
@@ -29,7 +32,7 @@ Voice: a careful analyst. Exact numbers, plain words, no hype, no trading advice
 ## Rationale
 Every verdict sentence is generated from the locked test's result, so the copy cannot overstate a finding. "Points" avoids
 the trap of "2%" meaning both "2 percentage points" and "2 percent of the price". The closing callout gives *reasons* gaps
-can last (fees, different users, moving money between platforms) without claiming we measured them.
+can last (fees, different users, moving money between platforms) without claiming I measured them.
 
-## Words we avoid
+## Words to avoid
 "Arbitrage", "free money", "edge", "alpha", "beat the market", and anything that reads as a trading instruction.

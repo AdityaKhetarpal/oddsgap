@@ -49,7 +49,7 @@ print("cutoff:", cutoff, "·", int(data["kalshi_historical"].sum()), "historical
 
 # %% [markdown]
 # ### Read one Kalshi candle
-# Recent and historical candles name their fields slightly differently ("close_dollars" vs "close"), so we read both.
+# Recent and historical candles name their fields slightly differently ("close_dollars" vs "close"), so I read both.
 
 # %%
 def num(block, name):

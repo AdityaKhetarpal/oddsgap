@@ -43,7 +43,7 @@ def get(url, params=None):
 
 # %% [markdown]
 # ### Kalshi: settled markets
-# Kalshi keeps recent settled markets at `/markets` and moves older ones to `/historical/markets`. We page through both
+# Kalshi keeps recent settled markets at `/markets` and moves older ones to `/historical/markets`. I page through both
 # for each series and keep one row per market.
 
 # %%
@@ -74,7 +74,7 @@ print(len(data), "Kalshi markets")
 data[["ticker", "event_ticker", "yes_sub_title", "close_time", "result", "volume_fp"]].head()
 
 # %% [markdown]
-# ### Keep the columns we need, inside the window
+# ### Keep the columns I need, inside the window
 
 # %%
 keep = ["ticker", "event_ticker", "series_ticker", "league", "title", "yes_sub_title", "open_time", "close_time",
@@ -149,7 +149,7 @@ data.groupby("league").size()
 
 # %% [markdown]
 # ### Polymarket team codes
-# The slug uses Polymarket's team codes. We save each league's team list to check codes against Kalshi's.
+# The slug uses Polymarket's team codes. I save each league's team list to check codes against Kalshi's.
 
 # %%
 teams = []

@@ -5,6 +5,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Motion from "@/components/Motion";
 import NextPage from "@/components/NextPage";
+import { overview, snapshot, PORTFOLIO, LINKEDIN, GITHUB } from "@/lib/data";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const SITE = "https://odds-gap.vercel.app";
@@ -35,12 +36,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer>
           <div className="wrap">
             <div>
-              <p>Data: Kalshi and Polymarket public market-data APIs (no keys). Markets that closed 1 Jan 2025 to 31 Oct 2026.</p>
+              <p>Data: Kalshi and Polymarket public market-data APIs (no keys). {snapshot(overview.results.pre_registered)}</p>
               <p>Descriptive research only: not trading advice and not a trading signal. Not affiliated with Kalshi or Polymarket.</p>
             </div>
             <div className="links">
-              <a href="https://github.com/AdityaKhetarpal/oddsgap">Notebooks and data on GitHub ↗</a>
-              <a href="https://www.linkedin.com/in/adityakhetarpal">Built by Aditya Khetarpal ↗</a>
+              <a href={PORTFOLIO}>Aditya Khetarpal: all projects ↗</a>
+              <a href={LINKEDIN}>LinkedIn ↗</a>
+              <a href={GITHUB}>Notebooks and data on GitHub ↗</a>
             </div>
           </div>
         </footer>

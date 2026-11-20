@@ -60,3 +60,12 @@ export const moment = (pair: Pair) => {
 };
 export const timeName = (t: number) =>
   new Date(t * 1000).toLocaleString("en-US", { day: "numeric", month: "short", year: "numeric", hour: "numeric", timeZone: "UTC" }) + " UTC";
+
+// who built it, and where a reader goes next
+export const PORTFOLIO = "https://adityakhetarpal.vercel.app";
+export const LINKEDIN = "https://www.linkedin.com/in/adityakhetarpal";
+export const GITHUB = "https://github.com/AdityaKhetarpal/oddsgap";
+export const TOOLS = "Built with Python (pandas), DuckDB SQL, GitHub Actions, and Next.js on Vercel.";
+// the data is a fixed snapshot: the tests were locked before any download, so it is not refreshed
+export const snapshot = (locked: string) =>
+  `A fixed snapshot: markets that closed 1 Jan 2025 to 31 Oct 2026. Tests locked ${dateName(locked)}. Not updated.`;
